@@ -1,0 +1,997 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+:root{
+  --body-color: #E4E9F7;
+  --nav-color: rgb(3, 75, 80);
+  --side-nav: rgb(2, 12, 58);
+  --text-color: #FFF;
+  --search-bar: #F2F2F2;
+  --search-text: #010718;
+  --text-color1: #000000;
+}
+body{
+  height: 100vh;
+  background-color: var(--body-color);
+}
+body.dark{
+  --body-color: #18191A;
+  --nav-color: #242526;
+  --side-nav: #242526;
+  --text-color: #CCC;
+  --search-bar: #242526;
+  --text-color1: #FFF;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 1rem;
+}
+.custom-hr {
+  border: none;
+  border-top: 2px solid rgb(3, 75, 80); /* Adjust thickness and color */
+}
+
+
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/Donations.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 85, 0.7); /* Green overlay */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  .hero-buttons{
+    padding: 1rem;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+  .donate-btn {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .donate-btn:hover {
+    background-color: white;
+    color: #28a745;
+  }
+  
+  /* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    color:  rgb(3, 75, 80); /* Green for the numbers */
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  .stat-caption {
+    font-size: 1.2rem;
+    color:var(--text-color1); /* Black for the captions */
+  }
+  
+  /* YouTube Video Section */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px; */
+  }
+  
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    /* padding-bottom: 56.25%; 16:9 aspect ratio */
+    height: 0;
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  .video-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Our Story Section */
+.our-story-section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  .story-image {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .our-story-header {
+    font-family: 'Lexend', sans-serif;
+    font-size: 36px;
+    color:var(--text-color1); /* Black for the captions */
+    margin-bottom: 20px;
+  }
+  
+  .our-story-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    color:var(--text-color1); /* Black for the captions */
+    line-height: 1.8;
+    margin: 0 auto;
+    width: 70%;
+  }
+  
+  .read-more-btn {
+    display: inline-block;
+    background-color:  rgb(9, 73, 54);
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: darkgreen;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .image-row {
+      flex-direction: column;
+    }
+  
+    .story-image {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  
+    .our-story-text {
+      width: 90%;
+    }
+  
+    .our-story-header {
+      font-size: 28px;
+    }
+  
+    .our-story-text {
+      font-size: 22px;
+    }
+  
+    .read-more-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .our-story-header {
+      font-size: 24px;
+    }
+  
+    .our-story-text {
+      font-size: 12px;
+    }
+  
+    .read-more-btn {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* Cheers Section */
+.cheers-section {
+    background-color: rgb(255, 216, 223);
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .cheers-header {
+    font-family: 'Lexend', sans-serif;
+    font-size: 36px;
+    color: black;
+    margin-bottom: 40px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .quote-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .quote-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .quote-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .quote-author {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .quote-card {
+      width: 45%;
+    }
+  
+    .cheers-header {
+      font-size: 32px;
+    }
+  
+    .quote-text {
+      font-size: 14px;
+    }
+  
+    .quote-author {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .quote-card {
+      width: 80%;
+    }
+  
+    .cheers-header {
+      font-size: 28px;
+    }
+  
+    .quote-text {
+      font-size: 14px;
+    }
+  
+    .quote-author {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .quote-card {
+      width: 100%;
+    }
+  
+    .cheers-header {
+      font-size: 24px;
+    }
+  
+    .quote-text {
+      font-size: 12px;
+    }
+  
+    .quote-author {
+      font-size: 14px;
+    }
+  }
+  
+  /* Scrolling Banner Section */
+.scrolling-banner {
+    overflow: hidden; /* Hide overflow to keep the banner clean */
+    position: relative; /* Set positioning context for absolute child */
+    height: 60px; /* Set height for the banner */
+  }
+  
+  .banner-content {
+    white-space: nowrap; /* Prevent line breaks */
+    display: inline-block; /* Allow for scrolling */
+    font-family: 'Lexend', sans-serif; /* Set font family */
+    font-size: 30px; /* Set font size */
+    font-weight: bold; /* Make the text bold */
+    color:var(--text-color1); /* Black for the captions */
+    animation: scroll 30s linear infinite; /* Scrolling animation */
+    padding: 1rem;
+  }
+  
+  /* Keyframes for scrolling effect */
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End off-screen to the left */
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .banner-content {
+      font-size: 19px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner-content {
+      font-size: 17px; /* Further adjust font size for very small screens */
+    }
+  }
+  
+  /* Our Leaders Section */
+.leaders-section {
+    padding: 40px;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  .leaders-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color:var(--text-color1); /* Black for the captions */
+    margin-bottom: 40px;
+  }
+  
+  /* Leader Cards Grid */
+  .leaders-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .leader-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .leader-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .leader-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .leader-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .leader-card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Get to Know Us Button */
+  .get-to-know-btn {
+    margin-top: 40px;
+  }
+  
+  .get-to-know-btn button {
+    background-color: rgb(9, 73, 54);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .get-to-know-btn button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .leaders-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .leaders-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .leader-card img {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .leaders-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .leader-card img {
+      height: 350px;
+    }
+  }
+  
+  /* Our Gallery Section */
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  .gallery-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color:var(--text-color1); /* Black for the captions */
+    margin-bottom: 30px;
+  }
+  
+  /* Image Gallery Container */
+  .gallery-container {
+    overflow-x: auto; /* Horizontal scrolling */
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap; /* Prevent wrapping of images */
+  }
+  
+  .image-gallery {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-gallery img {
+    height: 300px;
+    flex: 0 0 30%; /* Each image will take 30% of the container */
+    object-fit: cover; /* Ensures the images maintain their aspect ratio and fill the space */
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Open Gallery Button */
+  .open-gallery-btn {
+    margin-top: 30px;
+  }
+  
+  .open-gallery-btn button {
+    background-color: rgb(9, 73, 54);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .open-gallery-btn button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .image-gallery img {
+      flex: 0 0 40%; /* Images will take 40% width on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image-gallery img {
+      flex: 0 0 50%; /* Images will take 50% width on small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-gallery img {
+      flex: 0 0 100%; /* Images will take 100% width on very small screens */
+      height: 200px; /* Adjust the height for mobile view */
+    }
+  }
+
+  .Join-container{
+    background-color: white; /* Card background color */
+    border-radius: 15px; /* Curved edges */
+    padding: 15px; /* Padding inside cards */
+    width: 90%; /* Card width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    justify-content: center;
+
+  }
+  
+  .join-movement {
+    background-color: rgb(253, 222, 227); /* Set background color */
+    padding: 20px;
+    text-align: center; /* Center-align text */
+}
+
+.container {
+    margin: 0 auto; /* Center container */
+    max-width: 800px; /* Max width for container */
+}
+
+.join-title {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-size: 1em; /* Adjust title size */
+    margin: 0.5em ; /* Margin around title */
+}
+
+.join-text {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-size: 1.2em; /* Adjust text size */
+    margin: 1em 0; /* Margin around text */
+}
+
+.donate-button {
+    display: inline-block; /* Button styles */
+    background-color: rgb(9, 73, 54);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded edges */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-size: 1em; /* Button text size */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.donate-button:hover {
+    background-color: darkgreen; /* Darken button on hover */
+}
+
+.faq-header {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-size: 3rem; /* Header size */
+    margin: 2em 0 1em; /* Margin */
+    font-weight: bolder;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column; /* Arrange cards vertically */
+    align-items: center; /* Center align cards */
+}
+
+.faq-card {
+    background-color: white; /* Card background color */
+    border-radius: 15px; /* Curved edges */
+    padding: 15px; /* Padding inside cards */
+    margin: 20px 0; /* Margin around cards */
+    width: 70%; /* Card width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: left;
+}
+
+.faq-question {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-weight: bolder; /* Bold question */
+    font-size: 2rem; /* Header size */
+    text-align: left;
+    padding: 1rem;
+}
+
+.faq-answer {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    margin: 0; /* Remove margin */
+    font-size: 1.5rem; /* Header size */
+    padding: 1rem;
+    text-align: left;
+
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .join-title {
+        font-size: 1.5em; /* Smaller title size */
+    }
+    
+    .join-text {
+        font-size: 1em; /* Smaller text size */
+    }
+
+    .faq-header {
+        font-size: 1.5em; /* Smaller header size */
+    }
+    
+    .donate-button {
+        padding: 8px 16px; /* Adjust button size */
+        font-size: 0.9em; /* Smaller button text size */
+    }
+
+    .faq-card {
+        width: 95%; /* Wider cards on smaller screens */
+    }
+}
+
+.recent-updates {
+    padding: 20px; /* Padding around the section */
+    text-align: center; /* Center-align text */
+}
+
+.updates-header {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-size: 2em; /* Header size */
+    margin-bottom: 20px; /* Margin below header */
+    color:var(--text-color1); /* Black for the captions */
+}
+
+.updates-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items */
+}
+
+.update-card {
+    background-color: white; /* Card background color */
+    border-radius: 15px; /* Curved edges */
+    padding: 15px; /* Padding inside cards */
+    margin: 10px; /* Margin around cards */
+    width: 250px; /* Fixed width for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.update-image {
+    width: 100%; /* Full width of card */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crop images to fill the space */
+    border-radius: 10px; /* Rounded image edges */
+}
+
+.update-date {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    margin: 0.5em 0; /* Margin around date */
+}
+
+.update-title {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-weight: bold; /* Bold title */
+    margin: 0.5em 0; /* Margin around title */
+}
+
+.update-description {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    margin: 0.5em 0; /* Margin around description */
+}
+
+.read-more-button {
+    display: inline-block; /* Button styles */
+    background-color:rgb(3, 75, 80); /* Button background */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding inside button */
+    border-radius: 20px; /* Rounded edges */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-size: 0.9em; /* Button text size */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.read-more-button:hover {
+    background-color: darkgreen; /* Darken button on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .updates-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center align cards */
+    }
+    
+    .update-card {
+        width: 90%; /* Wider cards on smaller screens */
+    }
+
+    .updates-header {
+        font-size: 1.5em; /* Smaller header size */
+    }
+}
+
+.follow-us {
+    padding: 20px; /* Padding around the section */
+    text-align: center; /* Center-align text */
+}
+
+.follow-header {
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    font-size: 3rem; /* Header size */
+    margin-bottom: 20px; /* Margin below header */
+    font-weight: bolder; /* Bold text */
+    color:var(--text-color1); /* Black for the captions */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the social icons */
+    gap: 20px; /* Space between icons */
+}
+
+.social-icon {
+    width: 50px; /* Icon container width */
+    height: 50px; /* Icon container height */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center icon horizontally */
+    align-items: center; /* Center icon vertically */
+    border-radius: 50%; /* Round edges */
+    font-size: 24px; /* Icon size */
+}
+
+/* Background colors for social icons */
+.facebook {
+    background-color:#0b60cb; /* Facebook blue background */
+}
+
+.twitter {
+    background-color: #000000; /* Twitter blue background */
+}
+
+.instagram {
+    background-color: #f00075; /* Instagram pink background */
+}
+
+.tiktok {
+    background-color: #000000; /* TikTok black background */
+}
+
+/* Set icon color to white */
+.social-icon i {
+    color: white; /* Icon color */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .social-icons {
+        flex-direction: row; /* Stack icons vertically on small screens */
+        align-items: center; /* Center align icons */
+    }
+    
+    .follow-header {
+        font-size: 1.5em; /* Smaller header size on mobile */
+    }
+}
+
+  
+  .Partner-container {
+    margin: 0 auto;
+    background-color: rgb(253, 221, 226);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    max-width: 90%;
+    margin-bottom: 10px;
+
+  }
+  .Part-h2 {
+    text-align: center;
+    font-family: "lexend", sans-serif;
+    color:  rgb(9, 73, 54);
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+  .form-group {
+    margin-bottom: 15px;
+    font-family: "lexend", sans-serif;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 20px;
+    border: 0.1rem solid  rgb(9, 73, 54);
+    border-radius: 30px;
+  }
+  .form-group button {
+    width: 30%px;
+    padding: 15px;
+    border: none;
+    background-color:rgb(9, 73, 54);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .form-group button:hover {
+    background-color: #037836;
+  }
+  
+/* Media Queries */
+@media (max-width: 768px) {
+   .Partner-container {
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .Part-h2 {
+    text-align: center;
+    font-family: "lexend", sans-serif;
+    color:  rgb(9, 73, 54);
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+
+  .form-group button {
+    width: 40%;
+    padding: 15px;
+    border: none;
+    background-color:rgb(9, 73, 54);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+}
+
+.footer {
+    background-color: black; /* Footer background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center align text */
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+}
+
+.footer-ul{
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the nav items */
+    gap: 45px; /* Space between nav items */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: rgb(255, 255, 255); /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-logo {
+    margin-top: 20px; /* Space above the logo */
+}
+
+.footer-logo1 {
+    width: 100px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.footer-copy {
+    margin-top: 10px; /* Space above copyright text */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-ul {
+        flex-direction: row; /* Stack nav items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+}
+
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+    border-radius: 5rem;
+  }
+  
+  .social-icon {
+    color:  white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .social-icon:hover {
+    color: rgb(9, 73, 54);
+  }
+  

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery</title>
+    <link rel="stylesheet" href="../css/Gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lexend:400,700"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lexend:400,700"
+  />
+  <link rel="shortcut icon" href="../images/FLOGO.jpg" type="image/x-icon" />
+
+</head>
+<body>
+
+    <header>
+        <nav>
+          <div class="nav-bar">
+              <span class="logo navLogo">
+                  <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+                  <a href="../index.html">Addie's Afrique<br>Foundation</a>
+              </span>
+              <div class="menu">
+                  <div class="logo-toggle">
+                    <div class="logo-container">
+                        <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+                      <span class="logo">
+                          <a href="../index.html">Addie's Afrique <br>Foundation</a>
+                      </span>
+                      </div>
+                      <i class='bx bx-x siderbarClose'></i>
+                  </div>
+                  <hr class="custom-hr">
+                  <ul class="nav-links">
+                    <li><a href="../Addiesafriquefoundation/Payment.html">Donate</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+                    <!-- <li><a href="#">Who we are</a></li>
+                    <li><a href="#">What we do</a></li> -->
+                    <li><a href="../Addiesafriquefoundation/About.html">Resources</a></li>
+                    <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                      <i class='bx bx-moon moon'></i>
+                      <i class='bx bx-sun sun'></i>
+                  </div>
+                  <div class="searchBox">
+                     <div class="searchToggle">
+                      <i class='bx bx-x cancel'></i>
+                      <i class='bx bx-search search'></i>
+                     </div>
+                      <div class="search-field">
+                          <input type="text" placeholder="Search...">
+                          <i class='bx bx-search'></i>
+                      </div>
+                  </div>
+                  <i class='bx bx-menu sidebarOpen'></i>
+              </div>
+          </div>
+        </nav>
+        <script>
+        const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        let getMode = localStorage.getItem("mode");
+            if(getMode && getMode === "dark-mode"){
+              body.classList.add("dark");
+            }
+        // js code to toggle dark and light mode
+        modeToggle.addEventListener("click" , () =>{
+          modeToggle.classList.toggle("active");
+          body.classList.toggle("dark");
+          // js code to keep user selected mode even page refresh or file reopen
+          if(!body.classList.contains("dark")){
+              localStorage.setItem("mode" , "light-mode");
+          }else{
+              localStorage.setItem("mode" , "dark-mode");
+          }
+        });
+        // js code to toggle search box
+          searchToggle.addEventListener("click" , () =>{
+          searchToggle.classList.toggle("active");
+        });
+        
+        
+        //   js code to toggle sidebar
+        sidebarOpen.addEventListener("click" , () =>{
+        nav.classList.add("active");
+        });
+        body.addEventListener("click" , e =>{
+        let clickedElm = e.target;
+        if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+          nav.classList.remove("active");
+        }
+        });
+        </script>
+        </header>
+        <body>
+          <header>
+            <h1>OUR GALLERY</h1>
+        </header>
+        
+    <section class="gallery">
+        <!-- Repeat this block for each image (Total: 50 images) -->
+        <div class="gallery-item">
+            <img src="../images/share1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share4.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share5.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share5.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share6.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share7.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share8.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share9.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share11.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share12.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share13.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share14.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share15.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share16.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share17.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share18.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share19.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share20.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share21.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share22.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share23.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share24.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share25.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share26.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share27.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share28.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share29.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share30.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share31.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share32.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share33.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share34.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share35.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share36.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share37.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share38.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share39.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share40.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share41.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share42.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share43.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share44.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share45.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share46.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share47.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share48.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share49.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share50.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share51.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share52.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share53.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share54.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share55.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share56.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share57.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share58.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share59.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share60.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share61.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share62.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share63.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share64.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share65.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share66.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share67.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share68.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share69.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share70.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share71.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share72.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share73.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share74.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share75.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share76.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share77.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share78.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share79.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share80.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share81.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share82.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share83.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share84.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share85.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share86.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share87.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share88.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share89.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/share90.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <!-- <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/1s1s1.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/Donations.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/happy.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw2.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw3.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images/jttw4.jpg" alt="Gallery Image 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="../images//mg24.jpg" alt="Gallery Image 2" class="gallery-img">
+        </div> -->
+
+        <!-- Repeat for all 50 images -->
+    </section>
+
+    <!-- Lightbox for viewing images -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="../js/gallery.js"></script>
+
+</body>
+<footer class="footer">
+    <div class="footer-nav">
+        <ul class="footer-ul">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+            <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+            <li><a href="../Addiesafriquefoundation/blog.html">Updates</a></li>
+            <li><a href="../Addiesafriquefoundation/Gallery.html">Gallery</a></li>
+            <li><a href="../index.html#Partner">Join</a></li>
+        </ul>
+    </div>
+    <div class="footer-logo">
+        <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation Logo" class="footer-logo1">
+        <h2>Addie’s Afrique Foundation</h2>
+    </div>
+    <p class="footer-copy">© 2024 Addie’s Afrique Foundation. All rights reserved.</p>
+  
+    <div class="footer-social">
+        <a href="https://facebook.com/" class="social-icon"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://X.com/AddiesAfrique" class="social-icon"
+          ><i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://instagram.com/addiesafriquefoundation?igshid=OGQ5ZDc2ODk2ZA=="
+          class="social-icon"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="mailto:info@addiesafriquefoundation.com"
+          class="social-icon"
+          ><i class="fas fa-envelope-square"></i
+        ></a>
+        <a
+          href="https://youtube.com/@addiesafriquefoundationtv?si=NjXYNd4JfALNldfl"
+          class="social-icon"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://wa.me/+233504060438/?text=Hello%20Addie's%20Afrique%20Foundation!"
+          class="social-icon"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://t.me/+yXwc9Gzrwhl2NTlk" class="social-icon"
+          ><i class="fab fa-telegram-plane"></i
+        ></a>
+      </div>
+    </div>
+  
+  </footer>
+  
+</html>

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../images/FLOGO.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+/>
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+/* ===== Colours ===== */
+:root{
+    --body-color: #E4E9F7;
+    --nav-color: rgb(3, 75, 80);
+    --side-nav: #061779;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+    --text-color1: #000000;
+}
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+    font-family: 'Lexend', sans-serif;
+}
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+    --text-color1: #FFF;
+}
+
+.logo-img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+  }
+  
+
+  nav .nav-bar .logo.navLogo {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-bar .logo.navLogo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+	border-radius: 15px;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+body.dark nav{
+    border: 1px solid #393838;
+}
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	padding: 1rem;
+}
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    display: none;
+}
+nav .nav-bar .logo a{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: left;
+}
+.menu .logo-toggle{
+    display: none;
+}
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+.nav-links li a{
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+.dark-light i,
+.searchToggle i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+.searchToggle i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+.searchToggle.active i.cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+.searchToggle.active i.search{
+    opacity: 0;
+    pointer-events: none;
+}
+.searchBox{
+    position: relative;
+}
+.searchBox .search-field{
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.searchToggle.active ~ .search-field{
+    bottom: -74px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.search-field::before{
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--nav-color);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.search-field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--search-text);
+    background-color: var(--search-bar);
+}
+body.dark .search-field input{
+    color: var(--text-color);
+}
+.search-field i{
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+body.dark .search-field i{
+    color: var(--text-color);
+}
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        right: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+    nav.active .menu{
+        right: -0%;
+    }
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .menu .logo-toggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+.custom-hr {
+            border: none;
+            border-top: 2px solid rgb(3, 75, 80); /* Adjust thickness and color */
+        }
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(2, 121, 75);
+    font-family: 'Oswald', sans-serif;
+    margin-top: 1rem;
+}
+header h1{
+    font-family: 'Oswald', sans-serif;
+}
+
+        .blog-container {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .blog-image {
+            width: 150px; /* Set a fixed width for the image */
+            height: 150px; /* Set a fixed height for the image */
+            object-fit: cover; /* Ensure the image covers the area without stretching */
+            float: left;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .blog-date {
+            font-size: 14px;
+            color: rgb(3, 75, 80);
+            margin-top: 10px;
+        }
+        .blog-title {
+            color: rgb(3, 75, 80);
+            font-size: 24px;
+            margin-top: 0;
+        }
+        .blog-content {
+            display: none; /* Hide the content initially */
+            margin-top: 10px;
+        }
+        .show-more {
+            color: rgb(3, 75, 80);
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .blog-image {
+                width: 100px; /* Adjust image size on smaller screens */
+                height: 100px;
+            }
+            .blog-title {
+                font-size: 20px; /* Adjust title size on smaller screens */
+            }
+        }
+
+        .footer {
+    background-color: black; /* Footer background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center align text */
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    width: 100%;
+}
+
+.footer-ul{
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the nav items */
+    gap: 45px; /* Space between nav items */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: rgb(255, 255, 255); /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-logo {
+    margin-top: 20px; /* Space above the logo */
+}
+
+.footer-logo1 {
+    width: 100px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.footer-copy {
+    margin-top: 10px; /* Space above copyright text */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-ul {
+        flex-direction: row; /* Stack nav items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+}
+
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+    border-radius: 5rem;
+  }
+  
+  .social-icon {
+    color:  white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .social-icon:hover {
+    color: rgb(9, 73, 54);
+  }
+  
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-bar">
+          <span class="logo navLogo">
+              <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+              <a href="#">Addie's Afrique<br>Foundation</a>
+          </span>
+          <div class="menu">
+              <div class="logo-toggle">
+                <div class="logo-container">
+                  <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+                <span class="logo">
+                    <a href="../index.html">Addie's Afrique <br>Foundation</a>
+                </span>
+                </div>
+                  <i class='bx bx-x siderbarClose'></i>
+              </div>
+              <hr class="custom-hr">
+              <ul class="nav-links">
+                <li><a href="../Addiesafriquefoundation/Payment.html">Donate</a></li>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+                  <!-- <li><a href="#">Who we are</a></li>
+                  <li><a href="#">What we do</a></li> -->
+                  <li><a href="../Addiesafriquefoundation/About.html">Resources</a></li>
+                  <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+              </ul>
+          </div>
+          <div class="darkLight-searchBox">
+              <div class="dark-light">
+                  <i class='bx bx-moon moon'></i>
+                  <i class='bx bx-sun sun'></i>
+              </div>
+              <div class="searchBox">
+                 <div class="searchToggle">
+                  <i class='bx bx-x cancel'></i>
+                  <i class='bx bx-search search'></i>
+                 </div>
+                  <div class="search-field">
+                      <input type="text" placeholder="Search...">
+                      <i class='bx bx-search'></i>
+                  </div>
+              </div>
+              <i class='bx bx-menu sidebarOpen'></i>
+          </div>
+      </div>
+    </nav>
+    <script>
+    const body = document.querySelector("body"),
+    nav = document.querySelector("nav"),
+    modeToggle = document.querySelector(".dark-light"),
+    searchToggle = document.querySelector(".searchToggle"),
+    sidebarOpen = document.querySelector(".sidebarOpen"),
+    siderbarClose = document.querySelector(".siderbarClose");
+    let getMode = localStorage.getItem("mode");
+        if(getMode && getMode === "dark-mode"){
+          body.classList.add("dark");
+        }
+    // js code to toggle dark and light mode
+    modeToggle.addEventListener("click" , () =>{
+      modeToggle.classList.toggle("active");
+      body.classList.toggle("dark");
+      // js code to keep user selected mode even page refresh or file reopen
+      if(!body.classList.contains("dark")){
+          localStorage.setItem("mode" , "light-mode");
+      }else{
+          localStorage.setItem("mode" , "dark-mode");
+      }
+    });
+    // js code to toggle search box
+      searchToggle.addEventListener("click" , () =>{
+      searchToggle.classList.toggle("active");
+    });
+    
+    
+    //   js code to toggle sidebar
+    sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+    });
+    body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+      nav.classList.remove("active");
+    }
+    });
+    </script>
+    </header>
+    <body>
+      <header>
+        <h1>NEWS UPDATE</h1>
+    </header>
+    
+<div class="blog-container">
+    <img src="../images/BCA.jpg" alt="Blog 1 Image" class="blog-image">
+    <div class="blog-date">October 28, 2024</div>
+    <h2 class="blog-title">Spreading Awareness: Join Us for Breast Cancer Awareness on October 28 2024</h2>
+    <div class="blog-content">
+        <p>Breast cancer remains one of the most prevalent health challenges faced by women worldwide, but together, we can make a difference. Join us on <strong>October 28</strong> as we come together for an important cause—raising awareness about breast cancer and promoting the critical importance of early detection.</p>
+        
+        <h4>Why Breast Cancer Awareness Matters</h4>
+        <p>Breast cancer affects millions of lives every year, and early detection can save lives. However, many women do not have access to the necessary information or healthcare resources to detect it in its early stages. By spreading awareness, we aim to empower individuals with the knowledge and tools they need to take charge of their health.</p>
+        
+        <p>Our event on October 28 will focus on:</p>
+        <ul>
+            <li><strong>Educating the Community</strong>: Providing vital information about breast cancer, its symptoms, and the importance of regular check-ups and screenings.</li>
+            <li><strong>Promoting Early Detection</strong>: Encouraging women to perform regular self-examinations and seek medical screenings to catch potential issues early.</li>
+            <li><strong>Supporting Survivors and Fighters</strong>: Celebrating the strength of breast cancer survivors and offering support to those currently battling the disease.</li>
+        </ul>
+
+        <h4>What to Expect</h4>
+        <p>The event will feature:</p>
+        <ul>
+            <li><strong>Health Talks</strong>: Expert healthcare professionals will speak on the importance of early detection, how to perform self-exams, and the available treatment options for those diagnosed.</li>
+            <li><strong>Free Screenings</strong>: Medical professionals will offer free breast cancer screenings to attendees.</li>
+            <li><strong>Survivor Stories</strong>: Inspirational stories from breast cancer survivors who will share their experiences and journeys to recovery.</li>
+            <li><strong>Awareness Walk</strong>: A symbolic walk to raise awareness about breast cancer, promote unity, and show support for those affected by the disease.</li>
+        </ul>
+
+        <h4>How You Can Get Involved</h4>
+        <ol>
+            <li><strong>Attend the Event</strong>: Join us in person on October 28 to participate in the awareness activities and help spread the word.</li>
+            <li><strong>Share Information</strong>: If you can’t attend, you can still make an impact by sharing breast cancer awareness materials with your friends, family, and on social media.</li>
+            <li><strong>Donate</strong>: Contributions to breast cancer research or organizations supporting patients can make a significant difference in fighting this disease.</li>
+        </ol>
+
+        <h4>Event Details</h4>
+        <p><strong>Date</strong>: October 28, 2024</p>
+        <p><strong>Location</strong>: online on Telegram</p>
+        <p><strong>Time</strong>: 3pm GMT</p>
+
+        <h4>Together, We Can Make a Difference</h4>
+        <p>By raising awareness and encouraging early detection, we can help reduce the number of lives lost to breast cancer. Join us on <strong>October 28</strong> as we work to spread the message of hope, strength, and health. Your participation could make all the difference.</p>
+
+        <p><strong>For more information on how to participate or support the event, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong> Let’s stand together against breast cancer!</p>
+    </div>
+    <span class="show-more" onclick="toggleContent(this)">Show More</span>
+</div>
+
+<div class="blog-container">
+    <img src="../images/JW.jpg" alt="Blog 2 Image" class="blog-image">
+    <div class="blog-date">May 10, 2024</div>
+    <h2 class="blog-title">Journey to the West: Exploring Ghana’s Western Region While Giving Back</h2>
+    <div class="blog-content">
+        <p>Get ready for an unforgettable experience as we embark on the *Journey to the West*—a thrilling adventure through the beautiful Western Region of Ghana, filled with exploration, culture, and giving back to the community. This initiative aims to connect participants with local communities and support various charitable projects.</p>
+        <p>The Western Region of Ghana is renowned for its pristine beaches, lush forests, historical landmarks, and vibrant culture. As we journey through this magnificent region, participants will have the opportunity to explore its beauty while engaging in community service projects aimed at uplifting local families and individuals.</p>
+        <p>Throughout the journey, participants will:</p>
+        <ul>
+            <li><strong>Engage with Local Communities</strong>: Experience the warmth and hospitality of the Western Region’s residents, learning about their traditions and challenges.</li>
+            <li><strong>Participate in Charitable Activities</strong>: Join hands with local organizations to contribute to ongoing projects that benefit the community, such as education initiatives and environmental conservation.</li>
+            <li><strong>Explore Natural Wonders</strong>: Discover the stunning landscapes, from beaches to waterfalls, while also learning about the importance of preserving these natural treasures.</li>
+        </ul>
+        <h4>Event Details</h4>
+        <p><strong>Date</strong>: May 10, 2024</p>
+        <p><strong>Location</strong>: Western Region, Ghana</p>
+        <p><strong>Time</strong>: 9am GMT</p>
+        <h4>Join Us!</h4>
+        <p>This journey promises not just adventure but also an opportunity to give back and make a meaningful impact. We invite you to be a part of this incredible experience. Together, we can explore, learn, and support those in need.</p>
+        <p><strong>For inquiries and registration, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong> We can’t wait to see you there!</p>
+    </div>
+    <span class="show-more" onclick="toggleContent(this)">Show More</span>
+</div>
+
+<div class="blog-container">
+    <img src="../images/FSP.jpg" alt="Blog 3 Image" class="blog-image">
+    <div class="blog-date">June 13, 2024</div>
+    <h2 class="blog-title">One Female, One Sanitary Pad: Empowering Women Through Health and Dignity</h2>
+    <div class="blog-content">
+        <p>The *One Female, One Sanitary Pad* project launches as a beacon of hope for women and girls struggling with menstrual health management. This initiative aims to provide essential menstrual hygiene products to those in need while fostering discussions about women's health, dignity, and empowerment.</p>
+        <p>Access to sanitary products is crucial for maintaining health and dignity during menstruation. Unfortunately, many women and girls, particularly in underserved communities, face significant challenges due to a lack of resources. Through this project, we seek to bridge that gap and ensure that no woman or girl has to miss school or work due to her period.</p>
+        <h4>Project Highlights</h4>
+        <ul>
+            <li><strong>Distribution of Sanitary Pads</strong>: We will distribute sanitary pads to schools and communities, ensuring that every girl has access to the products she needs.</li>
+            <li><strong>Educational Workshops</strong>: Hosting workshops to educate women and girls about menstrual health, hygiene practices, and the importance of self-care.</li>
+            <li><strong>Advocacy for Women’s Health</strong>: Collaborating with local health organizations to raise awareness and advocate for better access to menstrual health products.</li>
+        </ul>
+        <h4>How to Support</h4>
+        <p>We invite individuals, organizations, and businesses to join us in this noble cause. Your support can take many forms:</p>
+        <ol>
+            <li><strong>Donate</strong>: Contributions will go towards purchasing sanitary products for distribution.</li>
+            <li><strong>Volunteer</strong>: Help us in organizing workshops, distributions, or raising awareness.</li>
+            <li><strong>Spread the Word</strong>: Share information about the project within your networks to increase its visibility.</li>
+        </ol>
+        <h4>Get Involved!</h4>
+        <p><strong>Date</strong>: Ongoing</strong><br>
+        <strong>Location</strong>: Various communities across Ghana</strong></p>
+        <p>Join us in empowering women and girls through health and dignity. Together, we can make a significant impact in our communities.</p>
+        <p><strong>For more information or to support this initiative, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong> Thank you for being a part of this change!</p>
+    </div>
+    <span class="show-more" onclick="toggleContent(this)">Show More</span>
+</div>
+
+<div class="blog-container">
+  <img src="../images/Lht.jpg" alt="Let’s Hit the Street Donation Campaign" class="blog-image">
+  <div class="blog-date">March 6, 2024</div>
+  <h2 class="blog-title">Let’s Hit the Street Donation Campaign: Join the Movement to Make a Difference!</h2>
+  <div class="blog-content">
+      <p>As we celebrate another year of our nation’s independence, we invite you to join hands in a remarkable initiative that goes beyond the celebrations—an opportunity to give back to our community and spread kindness where it is needed most. The <em>Let’s Hit the Street Donation Campaign</em> is gearing up for March 6, 2024, and we’re excited to have you as part of this impactful journey!</p>
+
+      <h4>What is the Let’s Hit the Street Donation Campaign?</h4>
+      <p>The <em>Let’s Hit the Street Donation Campaign</em> is a community-driven effort to provide essential supplies, care, and support to those in need. We’ll be hitting the streets to deliver food, clothing, and other necessities to individuals who face challenges every day. This event is designed to show solidarity, offer hope, and ensure that no one is left behind, especially in times of hardship.</p>
+
+      <h4>Why Join the Campaign?</h4>
+      <p>In every corner of our cities and towns, there are people facing difficulties—homelessness, hunger, and poverty. With the <em>Let’s Hit the Street Donation Campaign</em>, you can help alleviate some of these struggles by joining a team of passionate individuals committed to making a tangible difference. By participating, you will:</p>
+      <ul>
+          <li><strong>Bring Smiles to Faces</strong>: A small gesture of kindness can change someone’s day or even their life.</li>
+          <li><strong>Give Back to the Community</strong>: This campaign offers an opportunity to contribute directly to the welfare of those who need it most.</li>
+          <li><strong>Celebrate Independence in a Meaningful Way</strong>: While we reflect on our freedom, we must also think of those who are less fortunate and how we can extend that same spirit of togetherness and care.</li>
+      </ul>
+
+      <h4>What You Can Donate</h4>
+      <p>There are many ways you can contribute to this cause. Donations of all types are welcome, including:</p>
+      <ul>
+          <li><strong>Non-perishable food items</strong> (canned goods, rice, pasta, etc.)</li>
+          <li><strong>Clothing</strong> (gently used or new clothes for men, women, and children)</li>
+          <li><strong>Personal care products</strong> (toiletries, hygiene products)</li>
+          <li><strong>Monetary contributions</strong>, which will go toward purchasing essentials for distribution.</li>
+      </ul>
+
+      <p>Even if you don’t have material donations, your time and energy can make a huge impact. Volunteers are needed to help distribute the donations, engage with the community, and spread the word about the campaign.</p>
+
+      <h4>How You Can Get Involved</h4>
+      <p>There are several ways to participate in the <em>Let’s Hit the Street Donation Campaign</em>:</p>
+      <ol>
+          <li><strong>Donate Items</strong>: Gather your contributions and drop them off at one of our collection points, or bring them along on the day of the campaign.</li>
+          <li><strong>Volunteer Your Time</strong>: Join us on March 6 to help distribute donations, speak with recipients, and be part of the day’s activities.</li>
+          <li><strong>Spread the Word</strong>: Not everyone may know about this campaign. Share the event with friends, family, and colleagues, and encourage them to join as well.</li>
+      </ol>
+
+      <h4>Event Details</h4>
+      <p><strong>Date</strong>: March 6, 2024</p>
+      <p><strong>Location</strong>: Streets of Atia</p>
+      <p><strong>Time</strong>: 9 AM – 4 PM</p>
+      <p><strong>Meeting Point</strong>: KNUST</p>
+
+      <h4>Why This Matters</h4>
+      <p>Beyond providing immediate assistance, this campaign is about fostering a culture of giving and compassion in our society. Every item donated, every word of encouragement, and every helping hand matters. Together, we can create a ripple effect that reaches far beyond a single day.</p>
+
+      <h4>Join Us and Make a Difference!</h4>
+      <p>Let’s come together on March 6, 2024, and make this year’s <em>Let’s Hit the Street Donation Campaign</em> a resounding success. Whether you donate, volunteer, or simply spread the word, your contribution is invaluable. Let’s create a day filled with compassion, hope, and unity as we lift up those who need it most.</p>
+
+      <p><strong>See you on the streets—ready to make an impact!</strong></p>
+
+      <p><strong>For more information on how to get involved or make a donation, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong></p>
+  </div>
+  <span class="show-more" onclick="toggleContent(this)">Show More</span>
+</div>
+
+
+<script>
+    function toggleContent(element) {
+        const content = element.previousElementSibling; // Get the previous sibling (the blog content)
+        if (content.style.display === "none") {
+            content.style.display = "block"; // Show the content
+            element.textContent = "Show Less"; // Change the button text
+        } else {
+            content.style.display = "none"; // Hide the content
+            element.textContent = "Show More"; // Change the button text back
+        }
+    }
+</script>
+
+</body>
+<footer class="footer">
+  <div class="footer-nav">
+      <ul class="footer-ul">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+          <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+          <li><a href="../Addiesafriquefoundation/UnderConstruction.html">Updates</a></li>
+          <li><a href="../Addiesafriquefoundation/Gallery.html">Gallery</a></li>
+          <li><a href="../index.html#Partner">Join</a></li>
+      </ul>
+  </div>
+  <div class="footer-logo">
+      <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation Logo" class="footer-logo1">
+      <h2>Addie’s Afrique Foundation</h2>
+  </div>
+  <p class="footer-copy">© 2024 Addie’s Afrique Foundation. All rights reserved.</p>
+
+  <div class="footer-social">
+      <a href="https://facebook.com/" class="social-icon"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="https://X.com/AddiesAfrique" class="social-icon"
+        ><i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a
+        href="https://instagram.com/addiesafriquefoundation?igshid=OGQ5ZDc2ODk2ZA=="
+        class="social-icon"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="mailto:info@addiesafriquefoundation.com"
+        class="social-icon"
+        ><i class="fas fa-envelope-square"></i
+      ></a>
+      <a
+        href="https://youtube.com/@addiesafriquefoundationtv?si=NjXYNd4JfALNldfl"
+        class="social-icon"
+        ><i class="fab fa-youtube"></i
+      ></a>
+      <a
+        href="https://wa.me/+233504060438/?text=Hello%20Addie's%20Afrique%20Foundation!"
+        class="social-icon"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+      <a href="https://t.me/+yXwc9Gzrwhl2NTlk" class="social-icon"
+        ><i class="fab fa-telegram-plane"></i
+      ></a>
+    </div>
+  </div>
+</footer>
+</html>

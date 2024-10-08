@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Addie's Afrique Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Lexend:wght@400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/FLOGO.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lexend:400,700"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+/* ===== Colours ===== */
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Page Header */
+.page-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: rgb(9, 73, 54);
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+/* ===== Colours ===== */
+:root{
+    --body-color: #E4E9F7;
+    --nav-color: rgb(3, 75, 80);
+    --side-nav: rgb(2, 12, 58);
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+    --text-color1: #000000;
+}
+body{
+    background-color: var(--body-color);
+}
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+    --text-color1: #FFF;
+}
+
+.logo-img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 1rem;
+}
+
+  nav .nav-bar .logo.navLogo {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-bar .logo.navLogo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+	border-radius: 15px;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+body.dark nav{
+    border: 1px solid #393838;
+}
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	padding: 1rem;
+}
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    display: none;
+}
+nav .nav-bar .logo a{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: left;
+}
+.menu .logo-toggle{
+    display: none;
+}
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+.nav-links li a{
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+.dark-light i,
+.searchToggle i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+.searchToggle i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+.searchToggle.active i.cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+.searchToggle.active i.search{
+    opacity: 0;
+    pointer-events: none;
+}
+.searchBox{
+    position: relative;
+}
+.searchBox .search-field{
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.searchToggle.active ~ .search-field{
+    bottom: -74px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.search-field::before{
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--nav-color);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.search-field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--search-text);
+    background-color: var(--search-bar);
+}
+body.dark .search-field input{
+    color: var(--text-color);
+}
+.search-field i{
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+body.dark .search-field i{
+    color: var(--text-color);
+}
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        right: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+    nav.active .menu{
+        right: -0%;
+    }
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .menu .logo-toggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+}
+.custom-hr {
+            border: none;
+            border-top: 2px solid rgb(3, 75, 80); /* Adjust thickness and color */
+        }
+
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(2, 121, 75);
+    font-family: 'Oswald', sans-serif;
+    margin-top: 1rem;
+}
+
+
+
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            color: rgb(9, 73, 54);
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .values, .principles, .beliefs, .programs, .management {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 10px;
+                margin-top: 2rem;
+            }
+            section {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+        }
+
+        /* Styling for the history section */
+.history-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.history-section h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  color: #094936;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.history-section h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  color: #094936;
+  margin-top: 20px;
+}
+
+.history-paragraph {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Lexend', sans-serif;
+}
+
+.history-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-section ul li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+  color: #094936;
+}
+
+.history-section ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #094936;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .history-section {
+    padding: 15px;
+  }
+
+  .history-section h2 {
+    font-size: 1.8em;
+  }
+
+  .history-section h3 {
+    font-size: 1.3em;
+  }
+
+  .history-paragraph, .history-section ul li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-section {
+    padding: 10px;
+  }
+
+  .history-section h2 {
+    font-size: 1.5em;
+  }
+
+  .history-section h3 {
+    font-size: 1.2em;
+  }
+
+  .history-paragraph, .history-section ul li {
+    font-size: 0.9em;
+  }
+}
+
+
+        .achievements-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.Arch-h2 {
+  text-align: center;
+  color: #333;
+  font-family: "Oswald", sans-serif;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-family: "lexend", sans-serif;
+}
+th {
+  background-color: #cbc8c8;
+}
+tr:hover {
+  background-color: #f9f9f9;
+}
+p{
+    color: var(--text-color1);
+}
+
+
+        .activities-section {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color:rgb(3, 75, 80);
+            font-family: "Oswald", sans-serif;
+        }
+        h3 {
+            color:rgb(3, 75, 80);
+            margin-top: 20px;
+            border-bottom: 2px solid #f2f2f2;
+            font-family: "Oswald", sans-serif;
+            background-color: #cbc8c8;
+            padding: 5px;
+          }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-family: "lexend", sans-serif;
+        }
+        .issues-list, .activities-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .issues-list li, .activities-list li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-family: "lexend", sans-serif;
+        }
+
+.arrows {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  transition: 0.5s;
+  font-weight: bold;
+  font-size: large;
+}
+
+.arrows button:hover {
+  background-color: green;
+  color: white;
+}
+
+.join-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #d6d4d4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+.about-head-span {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: rgb(3, 75, 80);
+  text-align: center;
+}
+
+.commit-h2 {
+  color: rgb(3, 75, 80);
+  font-family: "Oswald", sans-serif;
+}
+
+.join-p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "lexend", sans-serif;
+  color: #000000;
+}
+ul{
+    color: var(--text-color1);
+
+}
+.activities-section ul{
+    color: #000000;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(3, 75, 80);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  font-family: "lexend", sans-serif;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+.about-sub-head {
+  color: rgb(3, 75, 80);
+  padding: 1rem;
+}
+
+.footer {
+    background-color: black; /* Footer background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center align text */
+    font-family: 'Lexend', sans-serif; /* Use Lexend font */
+    width: 100%;
+}
+.web-footer{
+    color: white; /* Text color */
+
+}
+
+.footer-ul{
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the nav items */
+    gap: 45px; /* Space between nav items */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: rgb(255, 255, 255); /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-logo {
+    margin-top: 20px; /* Space above the logo */
+}
+
+.footer-logo1 {
+    width: 100px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.footer-copy {
+    margin-top: 10px; /* Space above copyright text */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-ul {
+        flex-direction: row; /* Stack nav items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+}
+
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+    border-radius: 5rem;
+  }
+  
+  .social-icon {
+    color:  white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .social-icon:hover {
+    color: rgb(9, 73, 54);
+  }
+  
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="nav-bar">
+              <span class="logo navLogo">
+                  <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+                  <a href="#">Addie's Afrique<br>Foundation</a>
+              </span>
+              <div class="menu">
+                  <div class="logo-toggle">
+                    <div class="logo-container">
+                        <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+                      <span class="logo">
+                          <a href="../index.html">Addie's Afrique <br>Foundation</a>
+                      </span>
+                      </div>
+                      <i class='bx bx-x siderbarClose'></i>
+                  </div>
+                  <hr class="custom-hr">
+                  <ul class="nav-links">
+                    <li><a href="../Addiesafriquefoundation/SendFunds.html">Donate</a></li>
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+                      <!-- <li><a href="#">Who we are</a></li>
+                      <li><a href="#">What we do</a></li> -->
+                      <li><a href="../Addiesafriquefoundation/About.html">Resources</a></li>
+                      <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="darkLight-searchBox">
+                  <div class="dark-light">
+                      <i class='bx bx-moon moon'></i>
+                      <i class='bx bx-sun sun'></i>
+                  </div>
+                  <div class="searchBox">
+                     <div class="searchToggle">
+                      <i class='bx bx-x cancel'></i>
+                      <i class='bx bx-search search'></i>
+                     </div>
+                      <div class="search-field">
+                          <input type="text" placeholder="Search...">
+                          <i class='bx bx-search'></i>
+                      </div>
+                  </div>
+                  <i class='bx bx-menu sidebarOpen'></i>
+              </div>
+          </div>
+        </nav>
+        <script>
+        const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+        let getMode = localStorage.getItem("mode");
+            if(getMode && getMode === "dark-mode"){
+              body.classList.add("dark");
+            }
+        // js code to toggle dark and light mode
+        modeToggle.addEventListener("click" , () =>{
+          modeToggle.classList.toggle("active");
+          body.classList.toggle("dark");
+          // js code to keep user selected mode even page refresh or file reopen
+          if(!body.classList.contains("dark")){
+              localStorage.setItem("mode" , "light-mode");
+          }else{
+              localStorage.setItem("mode" , "dark-mode");
+          }
+        });
+        // js code to toggle search box
+          searchToggle.addEventListener("click" , () =>{
+          searchToggle.classList.toggle("active");
+        });
+        
+        
+        //   js code to toggle sidebar
+        sidebarOpen.addEventListener("click" , () =>{
+        nav.classList.add("active");
+        });
+        body.addEventListener("click" , e =>{
+        let clickedElm = e.target;
+        if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+          nav.classList.remove("active");
+        }
+        });
+        </script>
+        </header>
+        <body>
+          <header>
+            <h1>About Addie's Afrique Foundation</h1>
+        </header>
+          <section>
+        <h2>What Don't You Know?</h2>
+        <p>Welcome to Addie's Afrique Foundation, a beacon of hope and support for the vulnerable and in-need children of our society. Founded in 2022 by Daisy Addowaah Ofori, formally known as 'Adds Foundation', which was later changed to Addie's Afrique Foundation in 2023, a passionate advocate for disability and rehabilitation. Addie's Afrique Foundation is a non-governmental organization committed to making a positive impact at regional, national, and international levels.</p>
+
+        <h2>VISION AND MISSION</h2>
+        <h3>Vision:</h3>
+        <p>To contribute socially to the development of the nation and beyond by assisting children with and without disabilities who are in need and vulnerable. The Addie's Afrique Foundation aims to reach hundreds and thousands of children in the next two to five years.</p>
+        <h3>Mission:</h3>
+        <p>To work towards the financial, emotional, and physical provision of children with and without disabilities by assisting them with the necessary support to adapt to an inclusive society.</p>
+        <section class="history-section">
+            <h2>HISTORY</h2>
+            
+            <p class="history-paragraph">
+              In 2022, Add's Foundation was established by Ms. Daisy Addowaah Ofori, with the support of key stakeholders who shared in her vision. Daisy’s journey toward founding the organization began during a beauty pageant organized by the Department of Disability and Rehabilitation Studies at Kwame Nkrumah University of Science and Technology (KNUST). Despite the intense competition, Daisy remained confident in her ability to excel. However, as the event unfolded, her focus shifted from winning the pageant to a greater purpose: supporting children with and without disabilities.
+            </p>
+          
+            <p class="history-paragraph">
+              During the beauty pageant, Daisy had the privilege of meeting a visionary, Mr. Clifford Osei Amparbeng, who was not only the event's organizer but also the Vice President of the Ghana Association of Disability Students at KNUST. She shared her passion for helping children with and without disabilities, and Clifford, moved by her dedication, offered his support. Together, they embarked on a journey to establish what would become Addie's Afrique Foundation, with Clifford serving as the Managing Director.
+            </p>
+          
+            <p class="history-paragraph">
+              In 2023, Add’s Foundation underwent a transformation and was rebranded as Addie’s Afrique Foundation. This marked a significant shift in the foundation’s mission to become a global social cooperative organization and to extend its humanitarian efforts beyond the borders of Ghana and Africa. Addie’s Afrique Foundation is deeply committed to advocating for the rights and welfare of vulnerable children, with and without disabilities, especially those in rural communities.
+            </p>
+          
+            <h3>Our Commitment to the SDGs</h3>
+            
+            <p class="history-paragraph">
+              In line with the pillars of Sustainable Development Goals (SDGs) for the year 2030, Addie’s Afrique Foundation does participate in a number of the following:
+            </p>
+          
+            <ul>
+              <li><strong>Goal 1: No Poverty</strong> – The foundation supports the elimination of poverty and its resources and this applies more to the poor children and families mostly based in vulnerable rural areas.</li>
+              <li><strong>Goal 3: Good Health and Well-Being</strong> – The foundation believes in the health of children who are disabled or not disabled by providing both material and emotional support which helps improve their development and health status.</li>
+              <li><strong>Goal 4: Quality Education</strong> – Addie's Afrique is involved in advocating and ensuring that all children, irrespective of their abilities, can access quality education by addressing issues of exclusion.</li>
+              <li><strong>Goal 10: Reduced Inequalities</strong> – The foundation’s mission to support children with and without disabilities aligns with the goal of reducing inequalities, ensuring that vulnerable groups receive the attention and care they deserve.</li>
+            </ul>
+          
+            <p class="history-paragraph">
+              We believe that children are the future leaders of the world, and it is our responsibility to remove barriers and provide support, particularly for those who are marginalized and in greatest need. By aligning our efforts with these SDG goals, Addie’s Afrique Foundation is helping to create a more inclusive and equitable world for all.
+            </p>
+          
+            <p class="history-paragraph">
+              This journey is not just about charity; it is about empowering the next generation to thrive, ensuring that no child is left behind, and contributing to the global effort to achieve the Sustainable Development Goals by 2030.
+            </p>
+          </section>
+
+          <h2>VALUES AND PRINCIPLES</h2>
+        <h3>Values:</h3>
+        <ul>
+            <li><strong>Active Participation:</strong> Active participation fosters collaboration and engagement, propelling individuals and communities toward shared goals.</li>
+            <li><strong>Respect:</strong> Respect creates a foundation for positive interactions, understanding, and unity, fostering an inclusive environment.</li>
+            <li><strong>Honesty:</strong> Honesty cultivates a culture of transparency and trust, laying the groundwork for genuine connections and ethical practices.</li>
+            <li><strong>Patience:</strong> Patience enables individuals to navigate challenges with resilience, fostering understanding, growth, and enduring success.</li>
+        </ul>
+        <h3>Guiding Principles:</h3>
+        <ul>
+            <li><strong>Embracing Challenges:</strong> Opens the door to continuous growth and learning.</li>
+            <li><strong>Continuous Learning:</strong> Empowers individuals to adapt, innovate, and excel.</li>
+            <li><strong>Nurturing Success:</strong> Cultivates a culture of collaboration, innovation, and resilience.</li>
+            <li><strong>Celebrating Diversity:</strong> Acknowledges unique strengths and perspectives, fostering an inclusive community.</li>
+            <li><strong>Encouraging Resourcefulness:</strong> Inspires individuals to creatively navigate challenges and unlock their full potential.</li>
+        </ul>
+
+        <h2>What the Organization Believes In?</h2>
+        <ul>
+            <li>Inclusive society</li>
+            <li>Respect for human rights</li>
+            <li>Equal opportunities for both children with and without disabilities</li>
+        </ul>
+
+        <h2>PROGRAMS AND ACTIVITIES</h2>
+        <ul>
+            <li>Breast Cancer Awareness Program</li>
+            <li>Street Donation Exercise (annually)</li>
+            <li>Donation Exercises to Orphanages and Disability Centers</li>
+            <li>One Girl One Sanitary Towel Project (1-2 times a year)</li>
+            <li>Outreach Programs for Child Empowerment</li>
+        </ul>
+
+        <h2>Management and Planning</h2>
+        <ul>
+            <li><strong>Fundraising Programs:</strong> Elevate community support through impactful initiatives.</li>
+            <li><strong>Tally Cards:</strong> Provide a tangible avenue for contributing monetary support.</li>
+            <li><strong>Advertisements:</strong> Raise awareness and inspire action.</li>
+            <li><strong>Partnership Proposals:</strong> Secure sponsorships through thoughtful proposals.</li>
+            <li><strong>Board of Committee:</strong> Guides strategic planning and decision-making.</li>
+        </ul>
+
+        <h2>Structure and Governing Council</h2>
+        <ul>
+            <li><strong>CVO (Chief Visionary Officer):</strong> Responsible for strategic planning.</li>
+            <li><strong>CFO (Chief Financial Officer):</strong> Manages finances and financial reporting.</li>
+            <li><strong>CRO (Chief Revenue Officer):</strong> Oversees revenue generation processes.</li>
+            <li><strong>CTO (Chief Technology Officer):</strong> Manages information and IT operations.</li>
+        </ul>      
+      <div class="achievements-section">
+        <h2 class="Arch-h2">Projects</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Program</th>
+                    <th>Venue</th>
+                    <th>Date (Year)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Breast Cancer Awareness Program</td>
+                    <td>Telegram</td>
+                    <td>28th October, 2022</td>
+                </tr>
+                <tr>
+                    <td>Let Hit The Street</td>
+                    <td>Atia</td>
+                    <td>6th March, 2023</td>
+                </tr>
+                <tr>
+                    <td>1 Female 1 Sanitary Pad</td>
+                    <td>Life Community Special School, Kotei Deduako</td>
+                    <td>13th June, 2023</td>
+                </tr>
+                <tr>
+                    <td>Breast Cancer Awareness</td>
+                    <td>Telegram</td>
+                    <td>29th October, 2023</td>
+                </tr>
+                <tr>
+                    <td>Journey to the West</td>
+                    <td>Mmredane and Apronpronso D/A Basic School, Takoradi</td>
+                    <td>10th May, 2024</td>
+                </tr>
+                              <tr>
+                    <td>1 Female 1 Sanitary Pad</td>
+                    <td>Mmredane STMA Basic School, Takoradi</td>
+                    <td>13th June, 2023</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+    <div class="activities-section">
+      <h2>Activities in Addies Afrique Foundation</h2>
+  
+      <!-- Education Section -->
+      <h3>Education</h3>
+      <ul>
+          <li>Addie's Afrique Foundation Scholars Program</li>
+          <li>Learning IT</li>
+          <li>Addie's Literacy Program</li>
+      </ul>
+  
+      <!-- Social Section -->
+      <h3>Social</h3>
+      <ul>
+          <li>1 Female 1 Sanitary Pad</li>
+          <li>Entrepreneurship</li>
+      </ul>
+  
+      <!-- Health Section -->
+      <h3>Health</h3>
+      <ul>
+          <li>Vaccination</li>
+          <li>Eye Screening</li>
+      </ul>
+  
+      <!-- Leadership Development Section -->
+      <h3>Leadership Development</h3>
+      <ul>
+          <li>Capacity Building</li>
+          <li>Recruiting Student Leaders</li>
+      </ul>
+  
+      <!-- Issues of Interest Section -->
+      <h3>Issues of Interest</h3>
+      <ul class="issues-list">
+          <li>Less privileged children with and without disabilities</li>
+          <li>Advocacy of human rights</li>
+          <li>Awareness creation</li>
+      </ul>
+  
+      <!-- Activities Section -->
+      <h3>Activities</h3>
+      <ul class="activities-list">
+          <li>Let's hit the street (A street donation exercise every year for both persons with and without disabilities.)</li>
+          <li>Donation exercises to orphanages and disability centers.</li>
+          <li>One girl one sanitary towel project (At least once or twice a year)</li>
+          <li>Outreach programs (Programs to be with child empowerment in various areas).</li>
+      </ul>
+  </div>
+  </section>      
+  <h1 class="about-head-span">DO YOU WANT TO JOIN US?</h1>
+  <section class="join-section">
+    <h2 class="commit-h2">Our Commitment</h2>
+    <p class="join-p">
+      Addie's Afrique Foundation is dedicated to creating a positive impact on
+      the lives of those in need. Your support has the power to bring hope and
+      create lasting change for the less privileged, providing them with
+      essential resources and life-changing opportunities.
+    </p>
+
+    <h2 class="commit-h2">Join Us in Making a Difference</h2>
+    <p class="join-p">
+      By joining Addie's Afrique Foundation, you become an essential part of a
+      movement that transforms lives. Your contributions will directly impact
+      the less privileged, offering them the support they need to overcome
+      challenges and build a brighter future.
+    </p>
+
+    <a
+      href="../index.html#Partnership"
+      class="cta-button"
+      >Support Now</a
+    >
+  </section>
+
+  <h3 class="about-sub-head">
+    Addie's Afrique  Foundation is driven by the belief that every child deserves an equal opportunity for a bright future. Join us in creating a positive impact and fostering a more inclusive society.
+    </h3>
+    
+</body>
+
+<footer class="footer">
+    <div class="footer-nav">
+        <ul class="footer-ul">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+            <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+            <li><a href="../Addiesafriquefoundation/blog.html">Updates</a></li>
+            <li><a href="../Addiesafriquefoundation/Gallery.html">Gallery</a></li>
+            <li><a href="../index.html#Partner">Join</a></li>
+        </ul>
+    </div>
+    <div class="footer-logo">
+        <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation Logo" class="footer-logo1">
+        <h2 class="web-footer">Addie’s Afrique Foundation</h2>
+    </div>
+    <p class="footer-copy">© 2024 Addie’s Afrique Foundation. All rights reserved.</p>
+  
+    <div class="footer-social">
+        <a href="https://facebook.com/" class="social-icon"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://X.com/AddiesAfrique" class="social-icon"
+          ><i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://instagram.com/addiesafriquefoundation?igshid=OGQ5ZDc2ODk2ZA=="
+          class="social-icon"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="mailto:info@addiesafriquefoundation.com"
+          class="social-icon"
+          ><i class="fas fa-envelope-square"></i
+        ></a>
+        <a
+          href="https://youtube.com/@addiesafriquefoundationtv?si=NjXYNd4JfALNldfl"
+          class="social-icon"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://wa.me/+233504060438/?text=Hello%20Addie's%20Afrique%20Foundation!"
+          class="social-icon"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://t.me/+yXwc9Gzrwhl2NTlk" class="social-icon"
+          ><i class="fab fa-telegram-plane"></i
+        ></a>
+      </div>
+    </div>
+  
+  </footer>
+  
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Executives</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lexend:400,700"
+  />
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <link rel="shortcut icon" href="../images/FLOGO.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+<nav>
+  <div class="nav-bar">
+      <span class="logo navLogo">
+          <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+          <a href="#">Addie's Afrique<br>Foundation</a>
+      </span>
+      <div class="menu">
+          <div class="logo-toggle">
+            <div class="logo-container">
+              <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+            <span class="logo">
+                <a href="../index.html">Addie's Afrique <br>Foundation</a>
+            </span>
+            </div>
+              <i class='bx bx-x siderbarClose'></i>
+          </div>
+          <hr class="custom-hr">
+          <ul class="nav-links">
+            <li><a href="../Addiesafriquefoundation/Payment.html">Donate</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+              <!-- <li><a href="#">Who we are</a></li>
+              <li><a href="#">What we do</a></li> -->
+              <li><a href="../Addiesafriquefoundation/About.html">Resources</a></li>
+              <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+          </ul>
+      </div>
+      <div class="darkLight-searchBox">
+          <div class="dark-light">
+              <i class='bx bx-moon moon'></i>
+              <i class='bx bx-sun sun'></i>
+          </div>
+          <div class="searchBox">
+             <div class="searchToggle">
+              <i class='bx bx-x cancel'></i>
+              <i class='bx bx-search search'></i>
+             </div>
+              <div class="search-field">
+                  <input type="text" placeholder="Search...">
+                  <i class='bx bx-search'></i>
+              </div>
+          </div>
+          <i class='bx bx-menu sidebarOpen'></i>
+      </div>
+  </div>
+</nav>
+<script>
+const body = document.querySelector("body"),
+nav = document.querySelector("nav"),
+modeToggle = document.querySelector(".dark-light"),
+searchToggle = document.querySelector(".searchToggle"),
+sidebarOpen = document.querySelector(".sidebarOpen"),
+siderbarClose = document.querySelector(".siderbarClose");
+let getMode = localStorage.getItem("mode");
+    if(getMode && getMode === "dark-mode"){
+      body.classList.add("dark");
+    }
+// js code to toggle dark and light mode
+modeToggle.addEventListener("click" , () =>{
+  modeToggle.classList.toggle("active");
+  body.classList.toggle("dark");
+  // js code to keep user selected mode even page refresh or file reopen
+  if(!body.classList.contains("dark")){
+      localStorage.setItem("mode" , "light-mode");
+  }else{
+      localStorage.setItem("mode" , "dark-mode");
+  }
+});
+// js code to toggle search box
+  searchToggle.addEventListener("click" , () =>{
+  searchToggle.classList.toggle("active");
+});
+
+
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+  nav.classList.remove("active");
+}
+});
+</script>
+</header>
+<body>
+  <header>
+    <h1>OUR LEADERS</h1>
+</header>
+    <div class="profiles">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="../images/DaP.jpg" alt="John Doe">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Daisy Addowaah Ofori</h1>
+                <p class="profile-bio">Daisy Addowaah Ofori is the visionary Founder and CEO of Addie’s Afrique Foundation, a non-profit organization in Ghana dedicated to supporting children with and without disabilities by addressing their emotional, physical, and financial needs. Daisy's leadership and compassion drive the foundation's mission to positively impact thousands of children within the next three to five years.
+                    As a compassionate leader deeply concerned about the welfare and inclusion of children with and without disabilities, Daisy is committed to advocacy and creating a supportive environment for all. She is dedicated to building an organization that leaves an indelible, positive impact, providing life-changing opportunities for children throughout her leadership.
+                    Addie’s Afrique Foundation has been a transformative stepping stone in Daisy’s life, equipping her with valuable skills in public speaking, communication, collaboration, and leadership. Her educational journey began at Mizpah International School in Tesano, followed by Methodist Girls’ High School in Mamfe. Currently, she is in her final year pursuing a Bachelor’s Degree in Disability and Rehabilitation Studies at Kwame Nkrumah University of Science and Technology (KNUST).
+                    In addition to her philanthropic endeavors, Daisy is a business-oriented individual. She operates an online perfume store, Add’s Perfumery, showcasing her ambitious and entrepreneurial spirit. Daisy aspires to open an elegant perfume shop in the future, combining her business acumen with her passion for excellence.
+                    Daisy's ultimate dream is to empower children with and without disabilities, helping them to stand out and become prominent figures in society. Her dedication to making a difference is unwavering, and her contributions continue to inspire and uplift those around her.</p>
+                    <div class="team-social">
+                        <a href="https://www.instagram.com/_addowaah_?igsh=eHFzN3llemgzYW82" class="team-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/daisy_ofori?s=21" class="team-icon"
+                          ><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="mailto:oforidaisy994@gmail.com" class="team-icon"
+                          ><i class="fas fa-envelope-square"></i
+                        >
+                        <a href="https://www.linkedin.com/in/daisy-ofori-2a5b6b275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="team-icon"
+                        ><i class="fa fa-linkedin-square"></i
+                      >
+                        </a>
+                </div>
+                </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="../images/clifford.jpg" alt="Clifford Osei Amparbeng">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Clifford Osei Amparbeng</h1>
+                <p class="profile-bio">Clifford is a creative designer specializing in crafting compelling visuals and interactive brand experiences.</p>
+                <div class="team-social">
+                    <a href="https://www.instagram.com/cliffordamparbeng?igsh=YmgyOGw0aWVteDQy" class="team-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/cliffordasimeng?s=21" class="team-icon"
+                      ><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:" class="team-icon"
+                      ><i class="fas fa-envelope-square"></i
+                    >
+                    <a href="https://www.linkedin.com/in/clifford-osei-amparbeng-8b446b1aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="team-icon"
+                        ><i class="fa fa-linkedin-square"></i
+                      >
+                      </a>
+            </div>
+        </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="../images/DelaP.jpg" alt="Desmond Dela Yatsi">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Desmond Dela Yatsi</h1>
+                <p class="profile-bio">Desmond Dela Yatsi currently serves as the General Secretary of Addie’s Afrique Foundation, where he meticulously oversees all organizational documentation. In this pivotal role, Desmond ensures the seamless administration of foundation activities, maintains comprehensive records, manages correspondence, and supports the Board of Directors in strategic planning and execution. His keen organizational skills and attention to detail are vital in ensuring that the foundation operates efficiently and effectively.
+                    His dedication and hard work have led him to collaborate with various organizations, including a notable tenure as a Project Manager, where he championed initiatives for Persons with Disabilities within the Akropong district in the Central Region of Ghana. In this capacity, Desmond has successfully coordinated projects, secured funding, and built strong partnerships to support the foundation’s mission.
+                    A passionate advocate for children, both with and without disabilities, Desmond is deeply committed to the empowerment of youth in rural areas. With a particular interest in psychotherapy, he leverages his social media platforms to raise awareness and advocate for children with autism and other disabilities, striving to create a more inclusive society. His efforts have positively impacted the lives of many children, providing them with the resources and support they need to thrive.
+                    Desmond is currently pursuing a Bachelor of Science in Disability and Rehabilitation at Kwame Nkrumah University of Science and Technology (KNUST). His academic journey fuels his mission to build an environment where everyone is valued and no one is limited by their abilities.
+                    Desmond’s aspirations are clear: to create a world where inclusivity is the norm and every individual, regardless of their abilities, is appreciated and given equal opportunities to succeed. His vision is to foster a community where diversity is celebrated, and every person's unique contributions are recognized.</p>
+                    <div class="team-social">
+                        <a href="https://www.instagram.com/your_therapist_dela?igsh=dnBwOGVvMW1taWFj" class="team-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/desmond_yatsi?s=21" class="team-icon"
+                          ><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="mailto:desmondyatsi95@gmail.com" class="team-icon"
+                          ><i class="fas fa-envelope-square"></i
+                        >
+                        <a href="https://www.linkedin.com/in/desmond-yatsi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="team-icon"
+                        ><i class="fa fa-linkedin-square"></i
+                      >
+                        </a>
+                </div>
+        </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="../images/TinaP.jpg" alt="Jovial Peprah Twumasiwaa">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Jovial Peprah Twumasiwaa</h1>
+                <p class="profile-bio">Jovial Peprah Twumasiwaa is currently pursuing a Bachelor's degree in Sociology, driven by a strong educational background and a passion for making a positive impact in society. She began her educational journey at Sacred Heart JHS in Sunyani and continued at Sacred Heart Senior High School in Nsoatre, Bono Region, Ghana.
+                    As a young and hardworking individual, Jovial excels in organization and time management. Her experience in event planning and coordination has been instrumental in her role as the Organizing Secretary of Addie’s Afrique Foundation. In this capacity, Jovial is responsible for coordinating and scheduling meetings, appointments, and events, as well as managing and maintaining office supplies and equipment. Her meticulous approach ensures that the foundation's operations run smoothly and efficiently.
+                    Through her involvement with Addie’s Afrique Foundation, Jovial has extended a helping hand to the less privileged and to persons with or without disabilities. Her dedication to work and societal involvement makes her a valuable asset to the organization. Notably, as a Project Manager, Jovial played a crucial role in executing one of the foundation’s most significant projects to date, "Journey to the West," which positively impacted over 200 students in a rural area of the Central Region.
+                    Jovial’s leadership skills and her ability to mobilize colleagues to support various initiatives highlight her strong work ethic and commitment to making a difference. Her passion for helping others and her unwavering dedication ensure that she is poised to achieve great things in her future endeavors.
+                    Jovial Peprah Twumasiwaa’s journey is a testament to her commitment to creating a better society, and her contributions continue to inspire those around her.</p>
+            
+                    <div class="team-social">
+                        <a href="https://www.instagram.com/peprahjovial?igsh=MWd6a2xkZTZ0bW5iag==" class="team-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/peprahjovial?s=21" class="team-icon"
+                          ><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="mailto:jovialpeprah2@gmail.com" class="team-icon"
+                          ><i class="fas fa-envelope-square"></i
+                        >  
+                        <a href="https://www.linkedin.com/in/jovial-peprah-024975290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="team-icon"
+                        ><i class="fa fa-linkedin-square"></i
+                      >
+                        </a>
+                      </div>
+        </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="../images/SamuelP.jpg" alt="Samuel Akuffu">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Samuel Akuffu</h1>
+                <p class="profile-bio">As the Financial Secretary of Addie’s Afrique Foundation, Samuel Akuffu oversees the foundation's finances and investments with meticulous attention. His career in accounting has been both challenging and fulfilling, and he brings his expertise to lead a team of talented, diverse, and committed finance professionals.
+                    Samuel is passionate about leaving a legacy through inspiration, motivation, and empowerment. His vision is to be remembered for his positive impact on future generations.
+                    Originally from Ghana, Samuel holds a Higher National Diploma (HND) in Accountancy from Takoradi Technical University (TTU) and completed his secondary education at Takoradi Senior High School. To expand his knowledge and skills, he has furthered his education with the Corporate Finance Institute and enhanced his digital skills through Quantum Learning.
+                    Before joining Addie’s Afrique Foundation, Samuel served as an Account Officer and currently works as a Revenue Supervisor at Sekondi Takoradi Metropolitan Assembly (STMA). His extensive experience includes roles as an Administrator at KofyJesseTv, Board Director at Spotlight Africa Awards, Content Creator at Giant News Ghana, and Founder and Chief Executive Officer (CEO) of DBLESS Ventures.
+                    Samuel Akuffu’s commitment to financial excellence and his drive to inspire and empower others make him a valuable asset to Addie’s Afrique Foundation.</p>
+                    <div class="team-social">
+                        <a href="https://www.instagram.com/sam_dbless?igsh=a3VhaHo3Zm1pM2Fh" class="team-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/samuel__24?s=21" class="team-icon"
+                          ><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="mailto:akuffu.samuel@gmail.com" class="team-icon"
+                          ><i class="fas fa-envelope-square"></i
+                        >
+                        <a href="https://www.linkedin.com/in/samuel-a-1798791b9" class="team-icon"
+                        ><i class="fa fa-linkedin-square"></i
+                      >
+                      </a>
+                </div>
+        </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="../images/JovPL.jpg" alt="Quaye Ernestina Adwoa A.">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Quaye Ernestina Adwoa A.</h1>
+                <p class="profile-bio">
+                    Miss Ernestina Adwoa Quaye has been the public relations officer and Eastern regional representative of the foundation since 2023. Prior to this, she served as the public relations officer since 2024 and Eastern Regional representative since 2023. She attended her primary and junior high in Wesley international school from 2007-2018 in Koforidua, Eastern Region . Furthered into the secondary level from 2018 - 2021 in St. Mary’s Senior high school,Accra. She also furthered again to Kwame Nkrumah of science and technology (KNUST) Kumasi to read a bachelor degree in midwifery.</p>
+                    <div class="team-social">
+                        <a href="https://www.instagram.com/agyeiwaa_04?igsh=emZoNDJtdG10MnZ1" class="team-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/tinaemprezz?s=21" class="team-icon"
+                          ><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="team-icon"
+                          ><i class="fas fa-envelope-square"></i
+                        >
+                        <a href="#" class="team-icon"
+                        ><i class="fa fa-linkedin-square"></i
+                      >
+                      </a>
+                </div>
+        </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="../images/ObedP.jpg" alt="Chris Johnson">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Obed Otu Ayor</h1>
+                <p class="profile-bio">Obed Otu Ayor is a dedicated Computer Science student at the Kwame Nkrumah University of Science and Technology (KNUST), Ghana. He completed his secondary education at Forces Senior High and Technical School in Burma Camp, Accra, where he studied from 2018 to 2021. Obed was admitted to KNUST in 2022, pursuing his passion for technology and problem-solving.
+                  In 2024, Obed joined Addie's Afrique Foundation committed to social impact and was appointed as the Chief Technology Officer (CTO). As CTO, he oversees the development and implementation of technology strategies that enhance the foundation's mission of supporting vulnerable children, including those with disabilities.
+                  With a strong foundation in computer science and leadership, Obed is dedicated to leveraging technology to drive innovation and create meaningful change in society.</p>
+                <div class="team-social">
+                    <a href="https://www.instagram.com/_ozcill?igsh=MTZjbDV1cHJubnZocg%3D%3D&utm_source=qr" class="team-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/theobedavenue?s=21" class="team-icon"
+                      ><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="mailto:obedotuayor18@gmail.com" class="team-icon"
+                      ><i class="fas fa-envelope-square"></i
+                    >
+                    <a href="https://www.linkedin.com/in/obed-otu-ayor-2a700926a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="team-icon"
+                        ><i class="fa fa-linkedin-square"></i
+                      >
+                      </a>
+            </div>
+        </div>
+    </div>
+    </div> 
+</body>
+<footer class="footer">
+  <div class="footer-nav">
+      <ul class="footer-ul">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
+          <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+          <li><a href="../Addiesafriquefoundation/blog.html">Updates</a></li>
+          <li><a href="../Addiesafriquefoundation/Gallery.html">Gallery</a></li>
+          <li><a href="../index.html#Partner">Join</a></li>
+      </ul>
+  </div>
+  <div class="footer-logo">
+      <img src="../images/FLOGO.jpg" alt="Addie's Afrique Foundation Logo" class="footer-logo1">
+      <h2>Addie’s Afrique Foundation</h2>
+  </div>
+  <p class="footer-copy">© 2024 Addie’s Afrique Foundation. All rights reserved.</p>
+
+  <div class="footer-social">
+      <a href="https://facebook.com/" class="social-icon"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="https://X.com/AddiesAfrique" class="social-icon"
+        ><i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a
+        href="https://instagram.com/addiesafriquefoundation?igshid=OGQ5ZDc2ODk2ZA=="
+        class="social-icon"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="mailto:info@addiesafriquefoundation.com"
+        class="social-icon"
+        ><i class="fas fa-envelope-square"></i
+      ></a>
+      <a
+        href="https://youtube.com/@addiesafriquefoundationtv?si=NjXYNd4JfALNldfl"
+        class="social-icon"
+        ><i class="fab fa-youtube"></i
+      ></a>
+      <a
+        href="https://wa.me/+233504060438/?text=Hello%20Addie's%20Afrique%20Foundation!"
+        class="social-icon"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+      <a href="https://t.me/+yXwc9Gzrwhl2NTlk" class="social-icon"
+        ><i class="fab fa-telegram-plane"></i
+      ></a>
+    </div>
+  </div>
+</footer>
+</html>

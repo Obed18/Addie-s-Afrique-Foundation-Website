@@ -1,0 +1,109 @@
+/* styles.css */
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color:  rgb(3, 75, 80); /* Optional: background color for the header */
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+main {
+    padding: 20px;
+}
+.net-img{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.net-img img{
+    border-radius: 2rem;
+}
+.instructions {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+.f-name{
+    color:rgb(3, 75, 80) ;
+}
+header h1 {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step h2 {
+    color:  rgb(3, 75, 80);
+    font-family: 'Lexend', sans-serif;
+    text-align: left;
+}
+
+.step p {
+    line-height: 1.6;
+    margin: 5px 0;
+    font-family: 'Lexend', sans-serif;
+    text-align: left;
+}
+
+.back-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color:  rgb(3, 75, 80);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color:  rgb(3, 30, 32);
+}
+
+@media (max-width: 768px) {
+    .instructions {
+        padding: 10px;
+    }
+
+    .back-button {
+        width: 80px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-image {
+        width: 100%;
+    }
+
+    .instructions {
+        padding: 5px;
+    }
+
+    .back-button {
+        width: 60px;
+        font-size: 12px;
+    }
+}

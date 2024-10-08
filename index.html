@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Addie's Afrique Foundation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/headerstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+/>
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Lexend:400,700"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.0/simple-lightbox.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.0/simple-lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="shortcut icon" href="images/FLOGO.jpg" type="image/x-icon" />
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <span class="logo navLogo">
+            <img src="images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+            <a href="#">Addie's Afrique<br>Foundation</a>
+        </span>
+        <div class="menu">
+            <div class="logo-toggle">
+              <div class="logo-container">
+                <img src="images/FLOGO.jpg" alt="Addie's Afrique Foundation" class="logo-img">
+              <span class="logo">
+                  <a href="index.html">Addie's Afrique <br>Foundation</a>
+              </span>
+              </div>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <hr class="custom-hr">
+            <ul class="nav-links">
+              <li><a href="Addiesafriquefoundation/SendFunds.html">Donate</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Addiesafriquefoundation/About.html">About</a></li>
+                <!-- <li><a href="#">Who we are</a></li>
+                <li><a href="#">What we do</a></li> -->
+                <li><a href="Addiesafriquefoundation/About.html">Resources</a></li>
+                <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i>
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i>
+               </div>
+
+                <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div>
+            </div>
+            <i class='bx bx-menu sidebarOpen'></i>
+
+        </div>
+    </div>
+</nav>
+<script>
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+  let getMode = localStorage.getItem("mode");
+      if(getMode && getMode === "dark-mode"){
+        body.classList.add("dark");
+      }
+// js code to toggle dark and light mode
+  modeToggle.addEventListener("click" , () =>{
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+    // js code to keep user selected mode even page refresh or file reopen
+    if(!body.classList.contains("dark")){
+        localStorage.setItem("mode" , "light-mode");
+    }else{
+        localStorage.setItem("mode" , "dark-mode");
+    }
+  });
+// js code to toggle search box
+    searchToggle.addEventListener("click" , () =>{
+    searchToggle.classList.toggle("active");
+  });
+
+  
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+    nav.classList.remove("active");
+}
+});
+</script>
+<!-- Section for image -->
+  <!-- <section></section> -->
+  <!-- Full-screen Background Section -->
+  <section class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Join Us</h1>
+      <p>Embracing differences, empowering dreams</p>
+      <div class="hero-buttons">
+     <a href="Addiesafriquefoundation/SendFunds.html"> <button class="donate-btn">Donate</button></a>
+     <a href="index.html#Partnership"> <button class="donate-btn">Get Involved</button></a>
+    </div>
+    </div>
+  </section>
+
+  <!-- Next Section with 3 Numbers and Captions -->
+<section class="stats-section">
+    <div class="stat-box">
+      <h1 class="stat-number">3</h1>
+      <p class="stat-caption">Active Partners</p>
+    </div>
+    <div class="stat-box">
+      <h1 class="stat-number">300+</h1>
+      <p class="stat-caption">Lives Impacted</p>
+    </div>
+    <div class="stat-box">
+      <h1 class="stat-number">6</h1>
+      <p class="stat-caption">Projects Launched</p>
+    </div>
+  </section>
+  
+<!-- YouTube Video Section -->
+<section class="video-section">
+    <div class="video-wrapper">
+      <a href="https://www.youtube.com/watch?v=SfNzB5_ntRs" target="_blank" class="video-link">
+        <iframe
+          class="video-frame"
+          src="https://www.youtube.com/embed/SfNzB5_ntRs?autoplay=1&mute=1&controls=0&loop=1&playlist=SfNzB5_ntRs"
+          title="YouTube video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </a>
+    </div>
+  </section>
+    
+<!-- Two Images and Text Section -->
+<section class="our-story-section">
+    <div class="image-row">
+      <img src="images/mg24.jpg" alt="Image 1" class="story-image">
+      <img src="images/jttw4.jpg" alt="Image 2" class="story-image">
+    </div>
+    
+    <h2 class="our-story-header">Our Story Unfolds</h2>
+    
+    <div class="our-story-text">
+      <p>Welcome to Addie's Afrique Foundation, a beacon of hope and support for the vulnerable and in-need children of our society. Founded in 2022 by Daisy Addowaah Ofori, formerly known as 'Adds Foundation' which was later changed to Addie's Afrique Foundation in 2023, a passionate advocate for disability and rehabilitation. Addie's Afrique Foundation is a non-governmental organization committed to making a positive impact at regional, national, and international levels.</p>
+      
+      <p>Addie’s Afrique Foundation was established in 2022. Helping others has always been something Miss Daisy Addowaah Ofori loves to do even at the expense of herself. The journey all started when she took part in a beauty pageant competition in KNUST, department of disability studies and rehabilitation studies. The competition was tough but she was positive she could win. Throughout the competition, her inspiration to help children with disabilities evolved. So, she decided to include both children with and without disabilities in the organization, within the ages of 5 to 19. Adds’s foundation went through some transformation and finally became Addie's Afrique Foundation in 2023.</p>
+      
+      <p>Want to join our movement? We’d love to hear from you! Whether you’re looking to partner with us or simply want to learn more, reach out and let’s make magic happen together!</p>
+    </div>
+      <!-- Read More Button -->
+      <a href="Addiesafriquefoundation/About.html" class="read-more-btn">Read More</a>
+  </section>
+  
+  <!-- Cheers Section -->
+<section class="cheers-section">
+    <h2 class="cheers-header">Cheers!</h2>
+    
+    <div class="card-container">
+      <!-- First Card -->
+      <div class="quote-card">
+        <p class="quote-text">"The society comprises of different kind of individuals with different type of potentials."</p>
+        <img src="images/DaP.jpg" alt="Daisy Addowaah Ofori" class="quote-image">
+        <p class="quote-author">Daisy Addowaah Ofori</p>
+      </div>
+  
+      <!-- Second Card -->
+      <div class="quote-card">
+        <p class="quote-text">"Pretend you have no disability and you'll realize your strength."</p>
+        <img src="images/DelP.jpg" alt="Desmond Dela Yatsi" class="quote-image">
+        <p class="quote-author">Desmond Dela Yatsi</p>
+      </div>
+  
+      <!-- Third Card -->
+      <div class="quote-card">
+        <p class="quote-text">"Every Child has a potential in one way or the other."</p>
+        <img src="images/DaP.jpg" alt="Daisy Addowaah Ofori" class="quote-image">
+        <p class="quote-author">Daisy Addowaah Ofori</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Scrolling Banner Section -->
+<section class="scrolling-banner">
+    <div class="banner-content">
+      Empowering Communities Through Action * Join Us in Making a Difference! *  
+      Empowering Communities Through Action * Join Us in Making a Difference! *
+      Empowering Communities Through Action * Join Us in Making a Difference! *  
+      Empowering Communities Through Action * Join Us in Making a Difference! *
+
+    </div>
+  </section>
+  
+  <!-- Our Leaders Section -->
+<section class="leaders-section">
+    <h2>Our Leaders</h2>
+    <div class="leaders-container">
+      <!-- Leader 1 -->
+      <div class="leader-card">
+        <img src="images/DaP.jpg" alt="Daisy Addowaah Ofori">
+        <h3>Daisy Addowaah Ofori</h3>
+        <p>Founder & CEO</p>
+      </div>
+      <!-- Leader 2 -->
+      <div class="leader-card">
+        <img src="images/clifford.jpg" alt="Clifford Osei Amparbeng">
+        <h3>Clifford Osei Amparbeng</h3>
+        <p>Managing Director</p>
+      </div>
+      <!-- Leader 3 -->
+      <div class="leader-card">
+        <img src="images/DelP.jpg" alt="Desmond Dela Yatsi">
+        <h3>Desmond Dela Yatsi</h3>
+        <p>General Secretary</p>
+      </div>
+      <!-- Leader 4 -->
+      <div class="leader-card">
+        <img src="images/TinaP.jpg" alt="Jovial Peprah Twumasiwaa">
+        <h3>Jovial Peprah Twumasiwaa</h3>
+        <p>Organizing Secretary</p>
+      </div>
+      <!-- Leader 5 -->
+      <div class="leader-card">
+        <img src="images/SamuelP.jpg" alt="Samuel Akuffu">
+        <h3>Samuel Akuffu</h3>
+        <p>Financial Secretary</p>
+      </div>
+      <!-- Leader 6 -->
+      <div class="leader-card">
+        <img src="images/JovPL.jpg" alt="Quaye Ernestina Adwoa A.">
+        <h3>Quaye Ernestina Adwoa A.</h3>
+        <p>Eastern Regional Representative</p>
+      </div>
+      <!-- Leader 7 -->
+      <div class="leader-card">
+        <img src="images/ObedP.jpg" alt="Obed Otu Ayor">
+        <h3>Obed Otu Ayor</h3>
+        <p>Chief Technology Officer</p>
+      </div>
+    </div>
+    <!-- Get to Know Us Button -->
+    <div class="get-to-know-btn">
+     <a href="Addiesafriquefoundation/profile.html"> <button>Get to Know Us</button></a>
+    </div>
+  </section>
+  
+<!-- Our Gallery Section -->
+<section class="gallery-section">
+    <h2>Our Gallery</h2>
+    <div class="gallery-container">
+      <div class="image-gallery">
+        <a href="images/happy.jpg" class="gallery-lightbox">
+          <img src="images/happy.jpg" alt="Gallery Image 1">
+        </a>
+        <a href="images/jttw3.jpg" class="gallery-lightbox">
+          <img src="images/jttw3.jpg" alt="Gallery Image 2">
+        </a>
+        <a href="images/mg24.jpg" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 3">
+        </a>
+        <a href="images/jttw4.jpg" class="gallery-lightbox">
+          <img src="images/jttw4.jpg" alt="Gallery Image 4">
+        </a>
+        <a href="images/1s1s1.jpg" class="gallery-lightbox">
+          <img src="images/1s1s1.jpg" alt="Gallery Image 5">
+        </a>
+        <a href="images/mg24.jpg" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 6">
+        </a>
+        <!-- <a href="images/mg24.jpg" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 7">
+        </a>
+        <a href="images/mg24.jpg" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 8">
+        </a>
+        <a href="images/mg24.jpg" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 9">
+        </a>
+        <a href="images/mg24.jpg" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 10">
+        </a> -->
+      </div>
+    </div>
+    <div class="open-gallery-btn">
+      <a href="Addiesafriquefoundation/Gallery.html"> <button>Open Gallery</button></a>
+    </div>
+  </section>
+  
+  <section class="join-movement">
+    <div class="container">
+        <div class="Join-container">
+        <h2 class="join-title">Join the Movement, Make a Difference!</h2>
+        <p class="join-text">Your support can change lives today!</p>
+        <a href="Addiesafriquefoundation/SendFunds.html" class="donate-button">Donate</a>
+    </div>
+</div>
+    <h2 class="faq-header">Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-card">
+            <h3 class="faq-question">What is Addie’s Afrique Foundation?</h3>
+            <p class="faq-answer">We are a non-profit organization concerned about the welfare of children with and without disabilities. We provide emotional, physical, and financial support and also advocate for their rights.</p>
+        </div>
+        <div class="faq-card">
+            <h3 class="faq-question">How can I get involved?</h3>
+            <p class="faq-answer">Join us by volunteering or donating today!</p>
+        </div>
+        <div class="faq-card">
+            <h3 class="faq-question">Where does my donation go?</h3>
+            <p class="faq-answer">Your contributions directly support our programs and initiatives.</p>
+        </div>
+        <div class="faq-card">
+            <h3 class="faq-question">Can I partner with the foundation?</h3>
+            <p class="faq-answer">Absolutely! Fill out our partnership form to start.</p>
+        </div>
+        <div class="faq-card">
+            <h3 class="faq-question">What resources do you provide?</h3>
+            <p class="faq-answer">We offer educational materials, workshops, and support.</p>
+        </div>
+    </div>
+</section>
+
+<section class="recent-updates">
+    <h2 class="updates-header">Recent Updates</h2>
+    <div class="updates-container">
+        <div class="update-card">
+            <img src="images/JW.jpg" alt="Journey to the West" class="update-image">
+            <p class="update-date">May 10, 2024</p>
+            <h3 class="update-title">Journey to the West</h3>
+            <p class="update-description">Embark on an exciting journey to the West, filled with exploration and discovery.</p>
+            <a href="Addiesafriquefoundation/blog.html" class="read-more-button">Read More</a>
+        </div>
+        <div class="update-card">
+            <img src="images/Lht.jpg" alt="Let’s Hit the Street Donation Campaign" class="update-image">
+            <p class="update-date">March 6, 2024</p>
+            <h3 class="update-title">Let’s Hit the Street Donation Campaign</h3>
+            <p class="update-description">Join the donation drive as we hit the streets to help those in need.</p>
+            <a href="Addiesafriquefoundation/blog.html" class="read-more-button">Read More</a>
+        </div>
+        <div class="update-card">
+            <img src="images/FSP.jpg" alt="One Female, One Sanitary Pad Project Launches" class="update-image">
+            <p class="update-date">June 13, 2023</p>
+            <h3 class="update-title">One Female, One Sanitary Pad Project Launches</h3>
+            <p class="update-description">This project provides sanitary pads to women in need, promoting health and dignity.</p>
+            <a href="Addiesafriquefoundation/blog.html" class="read-more-button">Read More</a>
+        </div>
+        <div class="update-card">
+            <img src="images/BCA.jpg" alt="Spreading Awareness: Breast Cancer Awareness" class="update-image">
+            <p class="update-date">October 28, 2023</p>
+            <h3 class="update-title">Spreading Awareness: Breast Cancer Awareness</h3>
+            <p class="update-description">Join us on October 28 to raise awareness about breast cancer and promote early detection.</p>
+            <a href="Addiesafriquefoundation/blog.html" class="read-more-button">Read More</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="follow-us">
+    <h2 class="follow-header" id="Partnership">Follow Us Online!</h2>
+    <div class="social-icons">
+        <div class="social-icon facebook">
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+            </a>
+        </div>
+        <div class="social-icon twitter">
+            <a href="https://X.com/AddiesAfrique" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i> <!-- Twitter icon -->
+            </a>
+        </div>
+        <div class="social-icon instagram">
+            <a href="https://instagram.com/addiesafriquefoundation?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+            </a>
+        </div>
+        <div class="social-icon tiktok">
+            <a href="https://www.tiktok.com/@addiesafriquefoundation?_t=8pmfPOZPsX7&_r=1" target="_blank">
+                <i class="fab fa-tiktok"></i> <!-- TikTok icon -->
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="Partner-container">
+  <h2 class="Part-h2">Become Our Partner today!</h2>
+  <form
+      action="https://formspree.io/f/xwpezzpy"
+      method="POST"
+      id="partner-form">
+      
+      <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-group">
+          <label for="company">Company/Organization</label>
+          <input type="text" id="company" name="company" required>
+      </div>
+      <div class="form-group">
+          <label for="partnership">Type of Partnership</label>
+          <select id="partnership" name="partnership" required>
+              <option value="">Select an option</option>
+              <option value="sponsorship">Sponsorship</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="donation">Donation</option>
+              <option value="volunteering">Volunteering</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <button type="submit">Submit</button>
+      </div>
+  </form>
+</div>
+
+<!-- JavaScript Code -->
+<script>
+</script>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialize SimpleLightbox for the gallery
+    var lightbox = new SimpleLightbox('.gallery-lightbox', {
+      captions: true,
+      captionDelay: 250,
+      overlayOpacity: 0.8,
+    });
+  </script>
+
+<script>
+</script>
+
+  
+  <!-- <script>
+    // Smooth scrolling effect on window scroll
+    window.addEventListener('scroll', function() {
+      const scrollY = window.scrollY;
+      const gallery = document.querySelector('.image-gallery');
+      gallery.style.transform = `translateX(${scrollY * 0.1}px)`;
+    });
+    </script> -->
+        
+</body>
+
+<footer class="footer">
+    <div class="footer-nav">
+        <ul class="footer-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Addiesafriquefoundation/About.html">About</a></li>
+            <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
+            <li><a href="Addiesafriquefoundation/blog.html">Updates</a></li>
+            <li><a href="Addiesafriquefoundation/Gallery.html">Gallery</a></li>
+            <li><a href="index.html#Partner">Join</a></li>
+        </ul>
+    </div>
+    <div class="footer-logo">
+        <img src="images/FLOGO.jpg" alt="Addie's Afrique Foundation Logo" class="footer-logo1">
+        <h2>Addie’s Afrique Foundation</h2>
+    </div>
+    <p class="footer-copy">© 2024 Addie’s Afrique Foundation. All rights reserved.</p>
+
+    <div class="footer-social">
+        <a href="https://facebook.com/" class="social-icon"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://X.com/AddiesAfrique" class="social-icon"
+          ><i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://instagram.com/addiesafriquefoundation?igshid=OGQ5ZDc2ODk2ZA=="
+          class="social-icon"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="mailto:info@addiesafriquefoundation.com"
+          class="social-icon"
+          ><i class="fas fa-envelope-square"></i
+        ></a>
+        <a
+          href="https://youtube.com/@addiesafriquefoundationtv?si=NjXYNd4JfALNldfl"
+          class="social-icon"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://wa.me/+233504060438/?text=Hello%20Addie's%20Afrique%20Foundation!"
+          class="social-icon"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://t.me/+yXwc9Gzrwhl2NTlk" class="social-icon"
+          ><i class="fab fa-telegram-plane"></i
+        ></a>
+      </div>
+    </div>
+
+</footer>
+
+</html>
