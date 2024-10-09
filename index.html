@@ -49,14 +49,13 @@
               </div>
                 <i class='bx bx-x siderbarClose'></i>
             </div>
-            <hr class="custom-hr">
             <ul class="nav-links">
               <li><a href="Addiesafriquefoundation/SendFunds.html">Donate</a></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Addiesafriquefoundation/About.html">About</a></li>
                 <!-- <li><a href="#">Who we are</a></li>
                 <li><a href="#">What we do</a></li> -->
-                <li><a href="Addiesafriquefoundation/About.html">Resources</a></li>
+                <li><a href="Addiesafriquefoundation/blog.html">News</a></li>
                 <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
             </ul>
         </div>
@@ -231,43 +230,43 @@ if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contai
     <div class="leaders-container">
       <!-- Leader 1 -->
       <div class="leader-card">
-        <img src="images/DaP.jpg" alt="Daisy Addowaah Ofori">
+        <img src="images/DaP.jpg" alt="Daisy Addowaah Ofori" class="profile-image">
         <h3>Daisy Addowaah Ofori</h3>
         <p>Founder & CEO</p>
       </div>
       <!-- Leader 2 -->
       <div class="leader-card">
-        <img src="images/clifford.jpg" alt="Clifford Osei Amparbeng">
+        <img src="images/clifford.jpg" alt="Clifford Osei Amparbeng" class="profile-image">
         <h3>Clifford Osei Amparbeng</h3>
         <p>Managing Director</p>
       </div>
       <!-- Leader 3 -->
       <div class="leader-card">
-        <img src="images/DelP.jpg" alt="Desmond Dela Yatsi">
+        <img src="images/DelP.jpg" alt="Desmond Dela Yatsi" class="profile-image">
         <h3>Desmond Dela Yatsi</h3>
         <p>General Secretary</p>
       </div>
       <!-- Leader 4 -->
       <div class="leader-card">
-        <img src="images/TinaP.jpg" alt="Jovial Peprah Twumasiwaa">
+        <img src="images/TinaP.jpg" alt="Jovial Peprah Twumasiwaa" class="profile-image">
         <h3>Jovial Peprah Twumasiwaa</h3>
         <p>Organizing Secretary</p>
       </div>
       <!-- Leader 5 -->
       <div class="leader-card">
-        <img src="images/SamuelP.jpg" alt="Samuel Akuffu">
+        <img src="images/SamuelP.jpg" alt="Samuel Akuffu" class="profile-image">
         <h3>Samuel Akuffu</h3>
         <p>Financial Secretary</p>
       </div>
       <!-- Leader 6 -->
       <div class="leader-card">
-        <img src="images/JovPL.jpg" alt="Quaye Ernestina Adwoa A.">
+        <img src="images/JovPL.jpg" alt="Quaye Ernestina Adwoa A." class="profile-image">
         <h3>Quaye Ernestina Adwoa A.</h3>
         <p>Eastern Regional Representative</p>
       </div>
       <!-- Leader 7 -->
       <div class="leader-card">
-        <img src="images/ObedP.jpg" alt="Obed Otu Ayor">
+        <img src="images/ObedP.jpg" alt="Obed Otu Ayor" class="profile-image">
         <h3>Obed Otu Ayor</h3>
         <p>Chief Technology Officer</p>
       </div>
@@ -283,24 +282,12 @@ if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contai
     <h2>Our Gallery</h2>
     <div class="gallery-container">
       <div class="image-gallery">
-        <a href="images/happy.jpg" class="gallery-lightbox">
-          <img src="images/happy.jpg" alt="Gallery Image 1">
-        </a>
-        <a href="images/jttw3.jpg" class="gallery-lightbox">
-          <img src="images/jttw3.jpg" alt="Gallery Image 2">
-        </a>
-        <a href="images/mg24.jpg" class="gallery-lightbox">
-          <img src="images/mg24.jpg" alt="Gallery Image 3">
-        </a>
-        <a href="images/jttw4.jpg" class="gallery-lightbox">
-          <img src="images/jttw4.jpg" alt="Gallery Image 4">
-        </a>
-        <a href="images/1s1s1.jpg" class="gallery-lightbox">
-          <img src="images/1s1s1.jpg" alt="Gallery Image 5">
-        </a>
-        <a href="images/mg24.jpg" class="gallery-lightbox">
-          <img src="images/mg24.jpg" alt="Gallery Image 6">
-        </a>
+          <img src="images/happy.jpg" alt="Gallery Image 1" class="gallery-lightbox">
+          <img src="images/jttw3.jpg" alt="Gallery Image 2" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 3" class="gallery-lightbox">
+          <img src="images/jttw4.jpg" alt="Gallery Image 4" class="gallery-lightbox">
+          <img src="images/1s1s1.jpg" alt="Gallery Image 5" class="gallery-lightbox">
+          <img src="images/mg24.jpg" alt="Gallery Image 6" class="gallery-lightbox">
         <!-- <a href="images/mg24.jpg" class="gallery-lightbox">
           <img src="images/mg24.jpg" alt="Gallery Image 7">
         </a>
@@ -385,6 +372,10 @@ if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contai
             <a href="Addiesafriquefoundation/blog.html" class="read-more-button">Read More</a>
         </div>
     </div>
+    <div class="get-to-know-btn">
+      <a href="Addiesafriquefoundation/blog.html"> <button>News Feed</button></a>
+     </div>
+ 
 </section>
 
 
@@ -453,22 +444,18 @@ if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contai
   </form>
 </div>
 
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+
+
 <!-- JavaScript Code -->
 <script>
 </script>
 
-  <script src="script.js"></script>
-  <script>
-    // Initialize SimpleLightbox for the gallery
-    var lightbox = new SimpleLightbox('.gallery-lightbox', {
-      captions: true,
-      captionDelay: 250,
-      overlayOpacity: 0.8,
-    });
-  </script>
-
-<script>
-</script>
+  <script src="js/script.js"></script>
 
   
   <!-- <script>

@@ -11,6 +11,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lexend:400,700"
     />
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+  />
+  
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
@@ -42,8 +47,15 @@ body {
 .page-header {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
-    color: rgb(9, 73, 54);
+    color: var(--profile-text1);
     text-align: center;
+}
+header h1{
+  font-family: 'Oswald', sans-serif;
+  color: var(--profile-text1);
+}
+.page-header h1{
+  font-family: 'Oswald', sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -63,6 +75,9 @@ body {
     --search-bar: #F2F2F2;
     --search-text: #010718;
     --text-color1: #000000;
+    --profile-color: #FFF;
+  --profile-text: #000000;
+  --profile-text1:#094936;
 }
 body{
     background-color: var(--body-color);
@@ -74,6 +89,9 @@ body.dark{
     --text-color: #CCC;
     --search-bar: #242526;
     --text-color1: #FFF;
+    --profile-color:#242526;
+  --profile-text: #FFF;
+  --profile-text1:#ffffff;
 }
 
 .logo-img {
@@ -337,7 +355,7 @@ body.dark .search-field i{
 header {
     text-align: center;
     padding: 20px 0;
-    color: rgb(2, 121, 75);
+    color: var(--profile-text1);
     font-family: 'Oswald', sans-serif;
     margin-top: 1rem;
 }
@@ -382,7 +400,7 @@ header {
 .history-section {
   max-width: 800px;
   margin: 0 auto;
-  background-color: white;
+  background-color: var(--profile-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -392,7 +410,7 @@ header {
 .history-section h2 {
   font-family: 'Oswald', sans-serif;
   font-size: 2em;
-  color: #094936;
+  color: rgb(3, 75, 80);
   margin-bottom: 10px;
   text-align: center;
 }
@@ -406,7 +424,7 @@ header {
 
 .history-paragraph {
   font-size: 1.1em;
-  color: #333;
+  color: var(--profile-text);
   margin-bottom: 15px;
   font-family: 'Lexend', sans-serif;
 }
@@ -420,14 +438,14 @@ header {
   margin-bottom: 10px;
   padding-left: 15px;
   position: relative;
-  color: #094936;
+  color: var(--profile-text1);
 }
 
 .history-section ul li:before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #094936;
+  color: var(--profile-text1);
   font-size: 1.5em;
   line-height: 1.2;
 }
@@ -473,7 +491,7 @@ header {
         .achievements-section {
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--profile-color);
   padding: 20px;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
@@ -481,7 +499,7 @@ header {
 }
 .Arch-h2 {
   text-align: center;
-  color: #333;
+  color: var(--profile-text);
   font-family: "Oswald", sans-serif;
 }
 table {
@@ -494,6 +512,7 @@ th, td {
   border-bottom: 1px solid #ddd;
   text-align: left;
   font-family: "lexend", sans-serif;
+  color: var(--profile-text);
 }
 th {
   background-color: #cbc8c8;
@@ -509,7 +528,7 @@ p{
         .activities-section {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color:var(--profile-color);
             padding: 20px;
             border-radius: 8px;
         }
@@ -526,22 +545,27 @@ p{
             background-color: #cbc8c8;
             padding: 5px;
           }
+          .activities-section li{
+            color: var(--profile-text);
+          }
         ul {
             list-style-type: disc;
             padding-left: 20px;
             font-family: "lexend", sans-serif;
+            color: var(--profile-text);
         }
         .issues-list, .activities-list {
             list-style-type: none;
             padding-left: 0;
         }
         .issues-list li, .activities-list li {
-            background-color: #f9f9f9;
+            background-color: var(--profile-color);
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             font-family: "lexend", sans-serif;
+            color: var(--profile-text);
         }
 
 .arrows {
@@ -722,7 +746,6 @@ ul{
                       </div>
                       <i class='bx bx-x siderbarClose'></i>
                   </div>
-                  <hr class="custom-hr">
                   <ul class="nav-links">
                     <li><a href="../Addiesafriquefoundation/SendFunds.html">Donate</a></li>
                       <li><a href="../index.html">Home</a></li>
@@ -794,7 +817,7 @@ ul{
         </header>
         <body>
           <header>
-            <h1>About Addie's Afrique Foundation</h1>
+            <h1>ABOUT ADDIE'S AFRIQUE FOUNDATION</h1>
         </header>
           <section>
         <h2>What Don't You Know?</h2>

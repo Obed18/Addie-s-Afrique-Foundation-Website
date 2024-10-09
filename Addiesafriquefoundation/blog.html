@@ -34,6 +34,9 @@
     --search-bar: #F2F2F2;
     --search-text: #010718;
     --text-color1: #000000;
+    --profile-color: #FFF;
+  --profile-text: #000000;
+  --profile-text1:#094936;
 }
 body{
     height: 100vh;
@@ -47,6 +50,9 @@ body.dark{
     --text-color: #CCC;
     --search-bar: #242526;
     --text-color1: #FFF;
+    --profile-color:#242526;
+  --profile-text: #FFF;
+  --profile-text1:#ffffff;
 }
 
 .logo-img {
@@ -105,6 +111,7 @@ nav .nav-bar .logo a{
     color: var(--text-color);
     text-decoration: none;
     text-align: left;
+    text-wrap: nowrap;
 }
 .menu .logo-toggle{
     display: none;
@@ -267,6 +274,7 @@ body.dark .search-field i{
     nav.active .nav-bar .navLogo a{
         opacity: 0;
         transition: all 0.3s ease;
+        font-size: 13px;
     }
     .menu .logo-toggle{
         display: block;
@@ -307,7 +315,7 @@ header h1{
 }
 
         .blog-container {
-            background: #fff;
+            background: var(--profile-color);
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 20px;
             overflow: hidden;
@@ -425,6 +433,41 @@ header h1{
     color: rgb(9, 73, 54);
   }
   
+  .lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .lightbox-content {
+      max-width: 80%;
+      max-height: 80%;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -445,14 +488,13 @@ header h1{
                 </div>
                   <i class='bx bx-x siderbarClose'></i>
               </div>
-              <hr class="custom-hr">
               <ul class="nav-links">
-                <li><a href="../Addiesafriquefoundation/Payment.html">Donate</a></li>
+                <li><a href="../Addiesafriquefoundation/SendFunds.html">Donate</a></li>
                   <li><a href="../index.html">Home</a></li>
                   <li><a href="../Addiesafriquefoundation/About.html">About</a></li>
                   <!-- <li><a href="#">Who we are</a></li>
                   <li><a href="#">What we do</a></li> -->
-                  <li><a href="../Addiesafriquefoundation/About.html">Resources</a></li>
+                  <li><a href="../Addiesafriquefoundation/blog.html">News</a></li>
                   <li><a href="mailto:info@addiesafriquefoundation.com">Contact</a></li>
               </ul>
           </div>
@@ -520,9 +562,107 @@ header h1{
         <h1>NEWS UPDATE</h1>
     </header>
     
+    <div class="blog-container">
+        <img src="../images/EG.jpg" alt="Empowering Girls Menstrual Hygiene Initiative" class="blog-image">
+        <div class="blog-date">May 29, 2024</div>
+        <h2 class="blog-title">Empowering Girls: Menstrual Hygiene Initiative at Mberedane STMA Basic School, Takoradi</h2>
+        <div class="blog-content">
+            <p>Access to menstrual hygiene products is an essential right, yet many girls face challenges in managing their menstrual health due to a lack of resources. On <strong>May 29, 2024</strong>, <em>Addie’s Afrique Foundation</em> will be leading the <em>Empowering Girls</em> initiative at <strong>Mberedane STMA Basic School</strong> in Takoradi (Western Region), to address these challenges head-on.</p>
+            
+            <h4>Why Menstrual Hygiene Matters</h4>
+            <p>Menstrual hygiene management is critical to the well-being, education, and empowerment of girls. Many girls in underprivileged communities face difficulties obtaining sanitary products, which can lead to school absenteeism, a lack of confidence, and stigma. By supporting these girls, we not only promote their health but also help them remain focused on their education and future.</p>
+    
+            <h4>What the Initiative Involves</h4>
+            <ul>
+                <li><strong>Menstrual Hygiene Education</strong>: Interactive sessions will be held to educate girls about menstrual health, proper hygiene practices, and breaking down myths and stigmas surrounding menstruation.</li>
+                <li><strong>Distribution of Sanitary Products</strong>: Every girl at Mberedane STMA Basic School will receive a supply of sanitary pads and other hygiene materials, ensuring they have access to what they need during their periods.</li>
+                <li><strong>Open Discussions</strong>: We’ll create a safe space for the girls to ask questions, share their experiences, and feel empowered to manage their menstrual health with confidence.</li>
+            </ul>
+    
+            <h4>How You Can Help</h4>
+            <p>We cannot do this without your support. By contributing to the <em>Empowering Girls</em> initiative, you can help provide vital resources to girls in need. Here’s how you can make a difference:</p>
+            <ul>
+                <li><strong>Donate Sanitary Products</strong>: Provide sanitary pads and other menstrual hygiene products that will be distributed to the girls.</li>
+                <li><strong>Monetary Donations</strong>: Financial contributions will go towards purchasing pads, hygiene kits, and educational materials for the initiative.</li>
+                <li><strong>Spread the Word</strong>: Help us raise awareness about menstrual health and the importance of supporting girls in need by sharing this initiative with your network.</li>
+            </ul>
+    
+            <h4>Donate Now and Support</h4>
+            <p>Your donations will ensure that these girls can continue their education without disruption, and help foster a healthy, supportive environment where they can thrive.</p>
+    
+            <h4>Event Details</h4>
+            <p><strong>Date</strong>: May 29, 2024<br><strong>Location</strong>: Mberedane STMA Basic School, Takoradi (Western Region)</p>
+    
+            <p>By supporting the <em>Empowering Girls</em> initiative, you are not only providing essential hygiene products but also helping to empower a new generation of confident, educated young women. <strong>Donate today</strong> and help us ensure that no girl is held back by something as natural as menstruation.</p>
+    
+            <p><strong>For more information on how to donate or get involved, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong> Together, we can make a lasting difference in the lives of these girls.</p>
+        </div>
+        <span class="show-more" onclick="toggleContent(this)">Show More</span>
+    </div>
+    
+
+
+<div class="blog-container">
+    <img src="../images/jtapp.jpg" alt="Journey to the West Initiative" class="blog-image">
+    <div class="blog-date">May 15, 2024</div>
+    <h2 class="blog-title">A Heartfelt Thank You: Gratitude for Your Support on the Journey to the West Initiative</h2>
+    <div class="blog-content">
+        <p>We are filled with gratitude as we reflect on the tremendous success of our <em>Journey to the West</em> initiative, which took place on <strong>May 10, 2024</strong>. This remarkable journey to the Western Region of Ghana, filled with exploration, learning, and generosity, would not have been possible without the overwhelming support of our donors, volunteers, and partners.</p>
+
+        <h4>A Journey of Impact</h4>
+        <p>The <em>Journey to the West</em> initiative was more than just a trip—it was an opportunity to make a lasting difference in the lives of schoolchildren and underprivileged communities in the Western Region. Our team visited several schools and less-privileged communities, distributing educational supplies, providing essential resources, and sharing in meaningful interactions that will resonate with us for years to come.</p>
+        
+        <p>Thanks to your generosity, we were able to:</p>
+        <ul>
+            <li><strong>Donate Books and School Supplies</strong>: Many schools in under-resourced areas received the materials they need to enhance the learning experience of their students.</li>
+            <li><strong>Support the Less-Privileged</strong>: We provided food, clothing, and hygiene products to children and families who are often overlooked in their daily struggles.</li>
+            <li><strong>Empower and Uplift</strong>: Beyond material donations, we spent quality time with these communities, offering encouragement, mentorship, and a sense of hope for the future.</li>
+        </ul>
+
+        <h4>Your Contributions Made It Possible</h4>
+        <p>None of this would have been possible without the support and kindness of everyone who contributed to this initiative. Whether through financial donations, providing resources, or volunteering your time, your involvement has left a lasting impact on the lives of those we reached. Together, we were able to bring smiles, hope, and tangible support to those in need.</p>
+
+        <h4>Thank You for Your Generosity</h4>
+        <p>We would like to extend our heartfelt thanks to every individual, organization, and partner who contributed to the <em>Journey to the West</em>. Your belief in our mission and your unwavering support made this initiative a success, and for that, we are truly grateful.</p>
+
+        <h4>The Journey Doesn’t End Here</h4>
+        <p>While this initiative may have come to a close, the journey to uplift and empower vulnerable communities is far from over. We are committed to continuing our efforts, expanding our reach, and deepening our impact. And we know that with your continued support, we can achieve even greater things.</p>
+
+        <p>From the bottom of our hearts, <strong>thank you</strong> for making the <em>Journey to the West</em> a reality. Together, we are making a difference—one community at a time.</p>
+
+        <p><strong>Stay tuned for more updates and future initiatives. For those who want to continue supporting our mission, feel free to reach out to us at [Insert Contact Info].</strong> Let’s keep the momentum going!</p>
+    </div>
+    <span class="show-more" onclick="toggleContent(this)">Show More</span>
+</div>
+
+
+<div class="blog-container">
+    <img src="../images/JW.jpg" alt="Blog 2 Image" class="blog-image">
+    <div class="blog-date">May 10, 2024</div>
+    <h2 class="blog-title">Journey to the West: Exploring Ghana’s Western Region While Giving Back</h2>
+    <div class="blog-content">
+        <p>Get ready for an unforgettable experience as we embark on the *Journey to the West*—a thrilling adventure through the beautiful Western Region of Ghana, filled with exploration, culture, and giving back to the community. This initiative aims to connect participants with local communities and support various charitable projects.</p>
+        <p>The Western Region of Ghana is renowned for its pristine beaches, lush forests, historical landmarks, and vibrant culture. As we journey through this magnificent region, participants will have the opportunity to explore its beauty while engaging in community service projects aimed at uplifting local families and individuals.</p>
+        <p>Throughout the journey, participants will:</p>
+        <ul>
+            <li><strong>Engage with Local Communities</strong>: Experience the warmth and hospitality of the Western Region’s residents, learning about their traditions and challenges.</li>
+            <li><strong>Participate in Charitable Activities</strong>: Join hands with local organizations to contribute to ongoing projects that benefit the community, such as education initiatives and environmental conservation.</li>
+            <li><strong>Explore Natural Wonders</strong>: Discover the stunning landscapes, from beaches to waterfalls, while also learning about the importance of preserving these natural treasures.</li>
+        </ul>
+        <h4>Event Details</h4>
+        <p><strong>Date</strong>: May 10, 2024</p>
+        <p><strong>Location</strong>: Western Region, Ghana</p>
+        <p><strong>Time</strong>: 9am GMT</p>
+        <h4>Join Us!</h4>
+        <p>This journey promises not just adventure but also an opportunity to give back and make a meaningful impact. We invite you to be a part of this incredible experience. Together, we can explore, learn, and support those in need.</p>
+        <p><strong>For inquiries and registration, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong> We can’t wait to see you there!</p>
+    </div>
+    <span class="show-more" onclick="toggleContent(this)">Show More</span>
+</div>
+
 <div class="blog-container">
     <img src="../images/BCA.jpg" alt="Blog 1 Image" class="blog-image">
-    <div class="blog-date">October 28, 2024</div>
+    <div class="blog-date">October 28, 2023</div>
     <h2 class="blog-title">Spreading Awareness: Join Us for Breast Cancer Awareness on October 28 2024</h2>
     <div class="blog-content">
         <p>Breast cancer remains one of the most prevalent health challenges faced by women worldwide, but together, we can make a difference. Join us on <strong>October 28</strong> as we come together for an important cause—raising awareness about breast cancer and promoting the critical importance of early detection.</p>
@@ -554,7 +694,7 @@ header h1{
         </ol>
 
         <h4>Event Details</h4>
-        <p><strong>Date</strong>: October 28, 2024</p>
+        <p><strong>Date</strong>: October 28, 2023</p>
         <p><strong>Location</strong>: online on Telegram</p>
         <p><strong>Time</strong>: 3pm GMT</p>
 
@@ -567,32 +707,48 @@ header h1{
 </div>
 
 <div class="blog-container">
-    <img src="../images/JW.jpg" alt="Blog 2 Image" class="blog-image">
-    <div class="blog-date">May 10, 2024</div>
-    <h2 class="blog-title">Journey to the West: Exploring Ghana’s Western Region While Giving Back</h2>
+    <img src="../images/Ann.jpg" alt="Blog 4 Image" class="blog-image">
+    <div class="blog-date">September 19, 2023</div>
+    <h2 class="blog-title">Celebrating 1 Year of Impact: Addie’s Afrique Foundation’s First Anniversary</h2>
     <div class="blog-content">
-        <p>Get ready for an unforgettable experience as we embark on the *Journey to the West*—a thrilling adventure through the beautiful Western Region of Ghana, filled with exploration, culture, and giving back to the community. This initiative aims to connect participants with local communities and support various charitable projects.</p>
-        <p>The Western Region of Ghana is renowned for its pristine beaches, lush forests, historical landmarks, and vibrant culture. As we journey through this magnificent region, participants will have the opportunity to explore its beauty while engaging in community service projects aimed at uplifting local families and individuals.</p>
-        <p>Throughout the journey, participants will:</p>
+        <p>Today marks a special milestone in our journey of making a difference—<em>Addie’s Afrique Foundation</em> celebrates its first anniversary! From September 19 to 26, 2023, we commemorate a year of transforming lives, advocating for vulnerable children, and promoting inclusivity for children with disabilities. What started as a dream in 2022 has now blossomed into a powerful movement, thanks to the support of our volunteers, donors, and partners.</p>
+        
+        <h4>Reflecting on a Year of Purpose and Progress</h4>
+        <p>Founded by Daisy Addowaah Ofori, <em>Addie’s Afrique Foundation</em> was born from a deep desire to help vulnerable children, including those with disabilities. In just one year, we have grown into a dedicated organization, working tirelessly to improve the lives of children who need it most. This past year has been filled with inspiring projects, uplifting moments, and significant strides toward creating an inclusive society where every child—regardless of ability—can thrive.</p>
+
+        <h4>Our Impact Over the Year</h4>
         <ul>
-            <li><strong>Engage with Local Communities</strong>: Experience the warmth and hospitality of the Western Region’s residents, learning about their traditions and challenges.</li>
-            <li><strong>Participate in Charitable Activities</strong>: Join hands with local organizations to contribute to ongoing projects that benefit the community, such as education initiatives and environmental conservation.</li>
-            <li><strong>Explore Natural Wonders</strong>: Discover the stunning landscapes, from beaches to waterfalls, while also learning about the importance of preserving these natural treasures.</li>
+            <li><strong>One Girl, One Sanitary Towel Project</strong>: This initiative has provided hundreds of young girls with access to sanitary pads, promoting menstrual health and allowing them to stay in school without disruption.</li>
+            <li><strong>Street Donation Exercise</strong>: We reached out to underserved communities with food, clothing, and essential supplies, touching the lives of many vulnerable families.</li>
+            <li><strong>Breast Cancer Awareness Program</strong>: Our efforts have raised awareness about breast cancer, encouraging early detection and empowering women with knowledge about their health.</li>
+            <li><strong>Outreach to Orphanages and Disability Centers</strong>: Through donations and visits, we have provided much-needed support to children in orphanages and disability centers, ensuring that they have the resources and care they deserve.</li>
         </ul>
-        <h4>Event Details</h4>
-        <p><strong>Date</strong>: May 10, 2024</p>
-        <p><strong>Location</strong>: Western Region, Ghana</p>
-        <p><strong>Time</strong>: 9am GMT</p>
-        <h4>Join Us!</h4>
-        <p>This journey promises not just adventure but also an opportunity to give back and make a meaningful impact. We invite you to be a part of this incredible experience. Together, we can explore, learn, and support those in need.</p>
-        <p><strong>For inquiries and registration, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong> We can’t wait to see you there!</p>
+
+        <h4>The Journey Ahead</h4>
+        <p>As we celebrate this first anniversary, we are filled with hope and excitement for the future. Our mission remains clear: to support vulnerable children, both with and without disabilities, by providing them with the emotional, physical, and financial assistance they need to succeed. The work we’ve done over the past year is only the beginning, and we are committed to expanding our reach and deepening our impact in the years to come.</p>
+
+        <h4>Anniversary Week: September 19–26, 2023</h4>
+        <p>In celebration of this milestone, we’ve planned a series of activities throughout the week, including:</p>
+        <ul>
+            <li><strong>Charity Drives</strong>: We will be hosting donation drives, collecting educational materials, clothes, and food items to support children in need.</li>
+            <li><strong>Outreach Programs</strong>: Visits to local schools and communities to engage with children and provide them with resources that empower and uplift.</li>
+            <li><strong>Reflection and Gratitude</strong>: We’ll take time to reflect on our journey, recognizing the invaluable contributions of our volunteers, partners, and donors who have been instrumental in our success.</li>
+        </ul>
+
+        <h4>Join Us in Celebrating!</h4>
+        <p>We invite everyone—our supporters, friends, and the public—to join us in celebrating this important milestone. Whether it’s through a donation, volunteering, or simply spreading the word about our work, your involvement helps us continue this journey of service and advocacy.</p>
+
+        <h4>Thank You for Your Support</h4>
+        <p>Our first anniversary would not have been possible without the unwavering support of our donors, volunteers, and partners. Your generosity and commitment have been the driving force behind every achievement. As we look forward to another year of making an impact, we remain deeply grateful for all who have contributed to our mission.</p>
+        <p><strong>For more information on how to get involved or make a donation, please contact us at <a href="mailto:info@addiesafriquefoundation.com">info@addiesafriquefoundation.com</a>.</strong></p>
     </div>
     <span class="show-more" onclick="toggleContent(this)">Show More</span>
 </div>
 
+
 <div class="blog-container">
     <img src="../images/FSP.jpg" alt="Blog 3 Image" class="blog-image">
-    <div class="blog-date">June 13, 2024</div>
+    <div class="blog-date">June 13, 2023</div>
     <h2 class="blog-title">One Female, One Sanitary Pad: Empowering Women Through Health and Dignity</h2>
     <div class="blog-content">
         <p>The *One Female, One Sanitary Pad* project launches as a beacon of hope for women and girls struggling with menstrual health management. This initiative aims to provide essential menstrual hygiene products to those in need while fostering discussions about women's health, dignity, and empowerment.</p>
@@ -621,7 +777,7 @@ header h1{
 
 <div class="blog-container">
   <img src="../images/Lht.jpg" alt="Let’s Hit the Street Donation Campaign" class="blog-image">
-  <div class="blog-date">March 6, 2024</div>
+  <div class="blog-date">March 6, 2023</div>
   <h2 class="blog-title">Let’s Hit the Street Donation Campaign: Join the Movement to Make a Difference!</h2>
   <div class="blog-content">
       <p>As we celebrate another year of our nation’s independence, we invite you to join hands in a remarkable initiative that goes beyond the celebrations—an opportunity to give back to our community and spread kindness where it is needed most. The <em>Let’s Hit the Street Donation Campaign</em> is gearing up for March 6, 2024, and we’re excited to have you as part of this impactful journey!</p>
@@ -657,7 +813,7 @@ header h1{
       </ol>
 
       <h4>Event Details</h4>
-      <p><strong>Date</strong>: March 6, 2024</p>
+      <p><strong>Date</strong>: March 6, 2023</p>
       <p><strong>Location</strong>: Streets of Atia</p>
       <p><strong>Time</strong>: 9 AM – 4 PM</p>
       <p><strong>Meeting Point</strong>: KNUST</p>
@@ -666,7 +822,7 @@ header h1{
       <p>Beyond providing immediate assistance, this campaign is about fostering a culture of giving and compassion in our society. Every item donated, every word of encouragement, and every helping hand matters. Together, we can create a ripple effect that reaches far beyond a single day.</p>
 
       <h4>Join Us and Make a Difference!</h4>
-      <p>Let’s come together on March 6, 2024, and make this year’s <em>Let’s Hit the Street Donation Campaign</em> a resounding success. Whether you donate, volunteer, or simply spread the word, your contribution is invaluable. Let’s create a day filled with compassion, hope, and unity as we lift up those who need it most.</p>
+      <p>Let’s come together on March 6, 2023, and make this year’s <em>Let’s Hit the Street Donation Campaign</em> a resounding success. Whether you donate, volunteer, or simply spread the word, your contribution is invaluable. Let’s create a day filled with compassion, hope, and unity as we lift up those who need it most.</p>
 
       <p><strong>See you on the streets—ready to make an impact!</strong></p>
 
@@ -675,7 +831,19 @@ header h1{
   <span class="show-more" onclick="toggleContent(this)">Show More</span>
 </div>
 
-
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+  
+  
+  
+  <!-- JavaScript Code -->
+  <script>
+  </script>
+  
+    <script src="../js/blog.js"></script>
+  
 <script>
     function toggleContent(element) {
         const content = element.previousElementSibling; // Get the previous sibling (the blog content)

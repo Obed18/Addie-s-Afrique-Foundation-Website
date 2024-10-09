@@ -8,6 +8,43 @@
   list-style: none;
   box-sizing: border-box;
 }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .lightbox-content {
+      max-width: 80%;
+      max-height: 80%;
+  }
+}
+
+
 :root{
   --body-color: #E4E9F7;
   --nav-color: rgb(3, 75, 80);
@@ -16,6 +53,10 @@
   --search-bar: #F2F2F2;
   --search-text: #010718;
   --text-color1: #000000;
+  --profile-color: #FFF;
+  --profile-text: #000000;
+  --cheers-color:rgb(250, 222, 227);
+  --cheers-text: #000000;
 }
 body{
   height: 100vh;
@@ -28,6 +69,10 @@ body.dark{
   --text-color: #CCC;
   --search-bar: #242526;
   --text-color1: #FFF;
+  --profile-color:#242526;
+  --profile-text: #FFF;
+  --cheers-color:#18191A;
+  --cheers-text: #FFF;
 }
 .logo-container {
   display: flex;
@@ -263,7 +308,7 @@ body.dark{
   
   /* Cheers Section */
 .cheers-section {
-    background-color: rgb(255, 216, 223);
+    background-color: var(--cheers-color);
     padding: 50px 20px;
     text-align: center;
   }
@@ -271,7 +316,7 @@ body.dark{
   .cheers-header {
     font-family: 'Lexend', sans-serif;
     font-size: 36px;
-    color: black;
+    color: var(--cheers-text);
     margin-bottom: 40px;
   }
   
@@ -283,7 +328,7 @@ body.dark{
   }
   
   .quote-card {
-    background-color: white;
+    background-color: var(--profile-color);
     border-radius: 10px;
     padding: 20px;
     width: 30%;
@@ -294,7 +339,7 @@ body.dark{
   .quote-text {
     font-family: 'Lexend', sans-serif;
     font-size: 16px;
-    color: black;
+    color: var(--profile-text);
     margin-bottom: 20px;
   }
   
@@ -310,7 +355,7 @@ body.dark{
     font-family: 'Lexend', sans-serif;
     font-size: 18px;
     font-weight: bold;
-    color: black;
+    color: var(--profile-text);
   }
   
   /* Media Queries */
@@ -431,7 +476,7 @@ body.dark{
   }
   
   .leader-card {
-    background-color: #fff;
+    background-color: var(--profile-color);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -453,12 +498,12 @@ body.dark{
     margin-top: 15px;
     font-size: 20px;
     font-weight: bold;
-    color: #000;
+    color: var(--profile-text);
   }
   
   .leader-card p {
     font-size: 16px;
-    color: #555;
+    color: var(--profile-text);
   }
   
   /* Get to Know Us Button */
@@ -590,7 +635,7 @@ body.dark{
   }
 
   .Join-container{
-    background-color: white; /* Card background color */
+    background-color: var(--profile-color); /* Card background color */
     border-radius: 15px; /* Curved edges */
     padding: 15px; /* Padding inside cards */
     width: 90%; /* Card width */
@@ -600,7 +645,7 @@ body.dark{
   }
   
   .join-movement {
-    background-color: rgb(253, 222, 227); /* Set background color */
+    background-color: var(--cheers-color); /* Set background color */
     padding: 20px;
     text-align: center; /* Center-align text */
 }
@@ -614,12 +659,14 @@ body.dark{
     font-family: 'Lexend', sans-serif; /* Use Lexend font */
     font-size: 1em; /* Adjust title size */
     margin: 0.5em ; /* Margin around title */
+    color: var(--cheers-text);
 }
 
 .join-text {
     font-family: 'Lexend', sans-serif; /* Use Lexend font */
     font-size: 1.2em; /* Adjust text size */
     margin: 1em 0; /* Margin around text */
+    color: var(--profile-text);
 }
 
 .donate-button {
@@ -643,6 +690,7 @@ body.dark{
     font-size: 3rem; /* Header size */
     margin: 2em 0 1em; /* Margin */
     font-weight: bolder;
+    color: var(--cheers-text);
 }
 
 .faq-container {
@@ -652,7 +700,7 @@ body.dark{
 }
 
 .faq-card {
-    background-color: white; /* Card background color */
+    background-color:var(--profile-color); /* Card background color */
     border-radius: 15px; /* Curved edges */
     padding: 15px; /* Padding inside cards */
     margin: 20px 0; /* Margin around cards */
@@ -667,6 +715,7 @@ body.dark{
     font-size: 2rem; /* Header size */
     text-align: left;
     padding: 1rem;
+    color: var(--profile-text);
 }
 
 .faq-answer {
@@ -675,6 +724,7 @@ body.dark{
     font-size: 1.5rem; /* Header size */
     padding: 1rem;
     text-align: left;
+    color: var(--profile-text);
 
 }
 
@@ -721,7 +771,7 @@ body.dark{
 }
 
 .update-card {
-    background-color: white; /* Card background color */
+    background-color: var(--profile-color); /* Card background color */
     border-radius: 15px; /* Curved edges */
     padding: 15px; /* Padding inside cards */
     margin: 10px; /* Margin around cards */
@@ -739,17 +789,20 @@ body.dark{
 .update-date {
     font-family: 'Lexend', sans-serif; /* Use Lexend font */
     margin: 0.5em 0; /* Margin around date */
+    color: var(--profile-text);
 }
 
 .update-title {
     font-family: 'Lexend', sans-serif; /* Use Lexend font */
     font-weight: bold; /* Bold title */
     margin: 0.5em 0; /* Margin around title */
+    color: var(--profile-text);
 }
 
 .update-description {
     font-family: 'Lexend', sans-serif; /* Use Lexend font */
     margin: 0.5em 0; /* Margin around description */
+    color: var(--profile-text);
 }
 
 .read-more-button {
@@ -850,9 +903,9 @@ body.dark{
   
   .Partner-container {
     margin: 0 auto;
-    background-color: rgb(253, 221, 226);
+    background-color:var(--cheers-color);
     padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 14px 14px 14px 14px rgba(0.2, 0.2, 0.2, 0.2); /* Shadow effect */
     justify-content: center;
     max-width: 90%;
     margin-bottom: 10px;
@@ -868,19 +921,21 @@ body.dark{
   .form-group {
     margin-bottom: 15px;
     font-family: "lexend", sans-serif;
+    color: var(--profile-text);
   }
   .form-group label {
     display: block;
     margin-bottom: 5px;
   }
   .form-group input, .form-group textarea, .form-group select {
-    width: 100%;
+    width: 93%;
     padding: 20px;
     border: 0.1rem solid  rgb(9, 73, 54);
     border-radius: 30px;
+    background-color: var(--cheers-color);
   }
   .form-group button {
-    width: 30%px;
+    width: 40%;
     padding: 15px;
     border: none;
     background-color:rgb(9, 73, 54);

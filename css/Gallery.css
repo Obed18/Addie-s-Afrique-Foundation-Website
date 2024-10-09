@@ -29,6 +29,9 @@ body {
     --search-bar: #F2F2F2;
     --search-text: #010718;
     --text-color1: #000000;
+    --profile-color: #FFF;
+    --profile-text: #000000;
+    --profile-text1:#094936;  
 }
 body{
     background-color: var(--body-color);
@@ -40,6 +43,9 @@ body.dark{
     --text-color: #CCC;
     --search-bar: #242526;
     --text-color1: #FFF;
+    --profile-color:#242526;
+    --profile-text: #FFF;
+    --profile-text1:#ffffff;  
 }
 
 .logo-img {
@@ -59,6 +65,14 @@ body.dark{
     height: 50px;
     margin-right: 10px;
     border-radius: 1rem;
+}
+.g-head{
+color: var(--profile-text1);
+text-align: center;
+padding: 20px 0;
+color: rgb(2, 121, 75);
+font-family: 'Oswald', sans-serif;
+margin-top: 1rem;
 }
 
   nav .nav-bar .logo.navLogo {

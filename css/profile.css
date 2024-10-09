@@ -47,6 +47,9 @@ body {
     --search-bar: #F2F2F2;
     --search-text: #010718;
     --text-color1: #000000;
+    --profile-color: #FFF;
+    --profile-text: #000000;
+
 }
 body{
     background-color: var(--body-color);
@@ -58,6 +61,8 @@ body.dark{
     --text-color: #CCC;
     --search-bar: #242526;
     --text-color1: #FFF;
+    --profile-color:#242526;
+    --profile-text: #FFF;
 }
 
 .logo-img {
@@ -337,7 +342,7 @@ header {
 }
 
 .profile-container {
-    background-color: white;
+    background-color: var(--profile-color);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -360,6 +365,17 @@ header {
     border: 4px solid #018f59;
 }
 
+.profile-image1 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 60%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    border: 4px solid #018f59;
+    object-position: top;
+}
+
 /* Profile info */
 .profile-info {
     flex: 1;
@@ -375,6 +391,7 @@ header {
 .profile-bio {
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--profile-text);
 }
 
 /* Social icons */
@@ -416,6 +433,11 @@ header {
         height: 200px;
     }
 
+    .profile-image1 img {
+        width: 200px;
+        height: 200px;
+    }
+
     .profile-name {
         font-size: 2rem;
     }
@@ -439,6 +461,11 @@ header {
         width: 150px;
         height: 150px;
     }
+    .profile-image1 img {
+        width: 150px;
+        height: 150px;
+    }
+
 
     .profile-name {
         font-size: 1.5rem;
